@@ -1,0 +1,40 @@
+/* Home page styles */
+.home {
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    background-image: url('/path/to/background.jpg');
+    background-size: cover;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
+.highlight {
+    font-style: italic;
+}
+
+.book-now {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: #45a049;
+}
