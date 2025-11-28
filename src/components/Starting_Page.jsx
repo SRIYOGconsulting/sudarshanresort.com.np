@@ -1,6 +1,6 @@
 import React from 'react'
 import startingimg from '../assets/starting_page_img.jpg'
-import style from './Starting_Page.module.css'
+import style from '../styles/Starting_Page.module.css'
 const Starting_Page = () => {
   return (
     <div className={style.starting_container}>
