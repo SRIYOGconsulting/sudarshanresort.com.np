@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 25%; 
+    
+    /* margin-left:25%;  */
+}
+.top{
+  position: absolute;
+  top: 0 ;
+  left: 0;
+   
+    /* margin-left: 24.5%; */
+    color: #ffffff;
+    font-family: 'Lora';
+    font-style: italic;
+    font-size: 19px;
+    margin-top: 75px;
+   
+}
+
+.typing-container {
+  font-size: 55px;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  color: rgb(8, 4, 4);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width:100vh ;
+  color: white;
+
+  
+  
+}
+
+
+.cursor {
+  font-weight: bold;
+  margin-left: 3px;
+  color: #ffffff;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.blink {
+  opacity: 0;  /* blink effect */
+}
+
+
+.comfort {
+  font-size: 55px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-right: 25px;
+
+}
+
+.for_your_vacation{
+  font-size: 55px;
+  font-weight: 700;
+  margin-top: 40%;
+  font-family: 'Poppins';
+  color: rgb(255, 255, 255);
+  
+}
+
+.topcontainer{
+  position: absolute;
+  top: 0 ;
+  left: 0;
+   margin-top: 19%;
+    margin-left: 24.5%;
+}
+
+.typing-text{
+  font-style: italic;
+  font-family: 'Lora';
+}
+
+.book_now_btn{
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4d9221;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.book_now_btn:hover{
+  background-color: #353535;
+}
