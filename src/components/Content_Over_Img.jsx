@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Content_Over_Img.css";
 
 const Content_Over_Img = () => {
+  
   const texts = [
     "Luxury Hotel & Resort",
     "Comfort Redefined",
@@ -14,7 +15,7 @@ const Content_Over_Img = () => {
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
-    // Cursor blink
+   
     const blinkInterval = setInterval(() => {
       setBlink(prev => !prev);
     }, 500);
