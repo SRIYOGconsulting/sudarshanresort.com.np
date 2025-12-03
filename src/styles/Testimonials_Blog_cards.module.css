@@ -1,0 +1,49 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    
+    width: 350px;
+    height: 550px;
+    padding-left: 35px;
+        padding-bottom: 65px;
+        padding-top: 15px;
+    padding-right: 35px;
+}
+.container img{
+    width: 250px;
+ 
+}
+.container h2{
+    font-family: 'Poppins';
+    color: #535353;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    
+}
+.container span{
+    color: #9F9F9F;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    
+    
+}
+.Rating_icon{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container p{
+    text-align: center;
+    color: #787878;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+}

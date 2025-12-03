@@ -6,24 +6,33 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    /* gap: 10px; */
     background-color: rgb(255, 255, 255);
-   
+   padding: 60px 100px 35px 100px;
     content: justify;
 }
 
 .container h2{
-    font-size: 40px;
-    font-family: 'Open Sans';
+    
+        font-family: 'Poppins';
+    font-weight: 600;
+    color: #242424;
+    font-size: 32px;
+    
+    line-height: 1.1;
+   
+   
     font-weight: 700;
-    line-height: 50px;
-    color: rgb(0, 0, 0);
+    line-height: 80px;
+   
 
     /* border-bottom: 1px solid rgb(153, 149, 149); */
     /* margin-bottom: 10px; */
 }
 .horizontal_line{
- border-bottom: 1px solid rgb(255, 2, 2);
+    width: 60px;
+    border: 1px solid #C19B76;
+    
 }
 .Facilities_blogcards{
   display: flex;

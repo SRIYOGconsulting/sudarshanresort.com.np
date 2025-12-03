@@ -176,12 +176,15 @@ display: inline-block;
     transform: translateY(40px);
     transition: all 0.35s ease;
 }
+.start_price:hover{
+    background-color: #302e2d;
+}
 .img_wrap:hover .start_price {
     opacity: 1;
      color: #ffffff;
      padding: 5px 15px 5px 15px;
      border: none;
- background-color: green;
+ /* background-color: rgb(16, 26, 16); */
        border: none;
         cursor: pointer;
         font-size: 15px;

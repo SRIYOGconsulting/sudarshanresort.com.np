@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    overflow: hidden;
+}
+
+.container img {
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.EnjoyAgro_container {
+    position: sticky;
+    top: 0;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.EnjoyAgro_container h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.EnjoyAgro_container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.EnjoyAgro_container svg {
+    font-size: 60px; /* size of the CirclePlay icon */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.EnjoyAgro_container svg:hover {
+    transform: scale(1.2);
+}
