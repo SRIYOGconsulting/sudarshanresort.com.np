@@ -5,17 +5,15 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
-    
-    width: 350px;
-    height: 550px;
     padding-left: 35px;
-        padding-bottom: 65px;
-        padding-top: 15px;
+    padding-bottom: 65px;
+    padding-top: 15px;
     padding-right: 35px;
+    margin-top: 80px;
 }
 .container img{
     width: 250px;
- 
+
 }
 .container h2{
     font-family: 'Poppins';

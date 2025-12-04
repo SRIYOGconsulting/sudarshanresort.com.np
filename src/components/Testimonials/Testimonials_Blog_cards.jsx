@@ -9,10 +9,10 @@ const Testimonials_Blog_cards = (props) => {
         <h2>{props.name}</h2>
         <span>{props.title}</span>
         <div className={style.Rating_icon}>
-        <Star size={15} color="yellow" fill="yellow" />
-            <Star size={15} color="yellow" fill="yellow"/>
-            <Star size={15} color="yellow" fill="yellow"/>
-            <Star size={15} color="yellow" fill="yellow"/>
+        <Star size={15} color="orange" fill="orange" />
+            <Star size={15} color="orange" fill="orange"/>
+            <Star size={15} color="orange" fill="orange"/>
+            <Star size={15} color="orange" fill="orange"/>
         </div>
         <p>{props.description} </p>
     </div>
