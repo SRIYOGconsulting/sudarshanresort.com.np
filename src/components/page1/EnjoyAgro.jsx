@@ -1,6 +1,6 @@
 import React from 'react'
 // import img1 from './../assets/enjoy_agro.jpg'
-import style from '../styles/EnjoyArgo.module.css'
+import style from '../../styles/EnjoyArgo.module.css'
 import { CirclePlay } from 'lucide-react';
 
 const EnjoyAgro = () => {

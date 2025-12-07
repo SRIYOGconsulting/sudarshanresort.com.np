@@ -7,8 +7,13 @@
     height: 100vh;
     background-color: rgb(209, 213, 219);
      position: relative;
+      opacity: 1;
+   animation: blink 3s infinite;
 }
-
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
 .X{
     width: 30px;
     height: 30px;

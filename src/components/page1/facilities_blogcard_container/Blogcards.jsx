@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../styles/Blogcards.module.css'
+import style from '../../../styles/Blogcards.module.css'
 const Blogcards = (props) => {
   return (
      <div className={style.Blog_container}>

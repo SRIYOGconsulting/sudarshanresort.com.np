@@ -1,20 +1,20 @@
 
 import React, { useState,useEffect } from 'react';
-import style from '../../styles/Testimonials.module.css';
+import style from '../../../styles/Testimonials.module.css';
 import Testimonials_Blog_cards from './Testimonials_Blog_cards';
-import img1 from '../../assets/team/Pracas.png';
-import img2 from '../../assets/team/Prakash.webp';
-import img3 from '../../assets/team/Hiring.webp';
-import img4 from '../../assets/team/Sakchyam.webp';
-import img5 from '../../assets/team/Aashma.webp';
-import img6 from '../../assets/team/Bitisha.webp';
-import img7 from '../../assets/team/Lasta.webp';
-import img8 from '../../assets/team/Milan.webp';
-import img9 from '../../assets/team/Prakrit.webp';
-import img10 from '../../assets/team/Priyanka.webp';
-import img11 from '../../assets/team/Sagar.webp';
-import img12 from '../../assets/team/Rahul.webp';
-import img13 from '../../assets/team/Sarad.webp';
+import img1 from '../../../assets/team/Pracas.png';
+import img2 from '../../../assets/team/Prakash.webp';
+import img3 from '../../../assets/team/Hiring.webp';
+import img4 from '../../../assets/team/Sakchyam.webp';
+import img5 from '../../../assets/team/Aashma.webp';
+import img6 from '../../../assets/team/Bitisha.webp';
+import img7 from '../../../assets/team/Lasta.webp';
+import img8 from '../../../assets/team/Milan.webp';
+import img9 from '../../../assets/team/Prakrit.webp';
+import img10 from '../../../assets/team/Priyanka.webp';
+import img11 from '../../../assets/team/Sagar.webp';
+import img12 from '../../../assets/team/Rahul.webp';
+import img13 from '../../../assets/team/Sarad.webp';
 
 const testimonialsData = [
   { name: "Pracas", img: img1, title: "C.T.O", description:  "My stay at Sudarsan Agro Resort was nothing short of magical. From the serene ambiance to the delicious farm-to-table meals, every aspect exceeded my expectations." },

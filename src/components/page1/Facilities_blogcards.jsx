@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Blogcards from './facilities_blogcard_container/Blogcards'
-import img1 from '../assets/barbecue.png'
-import img2 from '../assets/powerBackup.png'
-import img3 from '../assets/parking.png'
-import img4 from '../assets/resturant.png'
-import style from '../styles/Facilities_blogcards.module.css'
+import img1 from '../../assets/barbecue.png'
+import img2 from '../../assets/powerBackup.png'
+import img3 from '../../assets/parking.png'
+import img4 from '../../assets/resturant.png'
+import style from '../../styles/Facilities_blogcards.module.css'
 const Facilities_blogcards = () => {
   return (
     <div className={style.container}>

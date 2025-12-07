@@ -1,0 +1,121 @@
+.container_footer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    
+    
+}
+.footer_hero_container{
+     display: flex;
+    
+    align-items: center;
+    justify-content:center;
+    gap: 100px;
+    background-color: green;
+    color: white;
+    padding: 30px;
+  
+}
+
+.footer_nav , .container_contact_info {
+    margin-bottom: 55px;
+}
+
+.footer_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 330px;
+    /* background-color: red; */
+    line-height: 100px;
+   
+}
+.footer_header h1{
+    /* margin-bottom: 60px; */
+    /* line-height: 35px;    */
+}
+.footer_header p{
+    font-size: 16px;
+    line-height: 25px;
+    width: 95%;
+    text-align: left;
+    font-family: 'Open Sans';
+
+}
+.social_media_icon_container{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.footer_nav{
+    display: flex;
+    flex-direction: column;
+   
+    margin-right: 125px;
+    
+}
+.footer_nav h2{
+    line-height: 90px;
+    /* margin-bottom: 15px; */
+}
+
+ul{
+    line-height: 35px;
+    /* color: white; */
+}
+.nav_btn{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppin';
+    font-weight: 400;
+    
+}
+.dash_list{
+    list-style-type: "- ";
+  padding-left: 20px;
+}
+
+.container_contact_info{
+    display: flex;
+    flex-direction: column;
+    line-height: 41px;
+    
+}
+.container_contact_info h2{
+    margin-bottom: 15px;
+}
+.location_container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.phone_container{
+    display: flex;
+     align-items: center;
+      gap: 15px;
+}
+.mail_container{
+    display: flex;
+     align-items: center;
+      gap: 15px;
+}
+
+
+
+.container_bottom{
+    background-color: #141414;
+    display: flex;
+    font-size: 17px;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    height: 45px;
+    justify-content: center;
+    gap: 29%;
+   
+}
+.container_bottom p{
+     font-family: 'Open Sans';
+}

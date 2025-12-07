@@ -14,13 +14,17 @@
   border-top: 2px solid #3c5f1d;
   backdrop-filter: blur(0px);
   border-top: none;
+ 
   
 }
+.nav_scroll{
+  background: #787878;   /* dark transparent */
 
-/* body:has(.navbar:sticky) .navbar {
-  background-color: rgba(180, 76, 76, 0.95);
-  backdrop-filter: blur(10px);
-} */
+  transition: all 0.3s ease-in-out;
+}
+.nav_scroll .li:hover{
+  color: black;
+}
 
 /* Logo */
 .nav_logo img {
@@ -46,12 +50,16 @@
     margin-right: 100px;
 }
 
-.nav_menu li {
+.li {
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   transition: color 0.4s ease;
+  text-decoration: none;
+}
+.li:hover{
+  color: green;
 }
 
 .nav_menu li:hover {

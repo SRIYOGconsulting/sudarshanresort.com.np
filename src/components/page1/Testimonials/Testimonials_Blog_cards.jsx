@@ -1,6 +1,6 @@
 import React from 'react'
 import { Star } from 'lucide-react'
-import style from '../../styles/Testimonials_Blog_cards.module.css'
+import style from '../../../styles/Testimonials_Blog_cards.module.css'
 
 const Testimonials_Blog_cards = (props) => {
   return (

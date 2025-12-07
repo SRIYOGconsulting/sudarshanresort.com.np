@@ -1,6 +1,6 @@
 import React from 'react'
-import style from '../styles/container2.module.css'
-import Sudarshanabout from '../assets/SudarshanAbout.jpg'
+import style from '../../styles/container2.module.css'
+import Sudarshanabout from '../../assets/SudarshanAbout.jpg'
 const container2 = () => {
   return (
     <div className={style.container}>

@@ -1,6 +1,6 @@
 import React from 'react'
-import SudarshanHome from '../assets/SudarshanHome.jpg'
-import style from '../styles/sudarshan_main.module.css'
+import SudarshanHome from '../../assets/SudarshanHome.jpg'
+import style from '../../styles/sudarshan_main.module.css'
 const sudarshan_main = () => {
   return (
     <div className={style.sudarshan_main_container}>

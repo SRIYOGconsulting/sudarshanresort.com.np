@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Content_Over_Img.css";
+import "../../styles/Content_Over_Img.css";
 
 const Content_Over_Img = () => {
   

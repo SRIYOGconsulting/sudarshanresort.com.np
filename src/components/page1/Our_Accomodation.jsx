@@ -1,7 +1,7 @@
 import React from 'react'
-import style from '../styles/Our_Accomodation.module.css'
-import room1 from '../assets/room1.jpg'
-import room2 from '../assets/room2.jpg'
+import style from '../../styles/Our_Accomodation.module.css'
+import room1 from '../../assets/room1.jpg'
+import room2 from '../../assets/room2.jpg'
 const Our_Accomodation = () => {
   return (
     <div className={style.container_accomodation_top}>

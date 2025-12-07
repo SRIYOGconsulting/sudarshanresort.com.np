@@ -1,6 +1,6 @@
 import React from 'react'
 import { Mail, PhoneCall,Facebook,Instagram,Linkedin } from 'lucide-react'
-import style  from '../styles/homepage.module.css'
+import style  from '../../styles/homepage.module.css'
 // import NavBar from './Nav_Bar'
 
 const Home_page = () => {
