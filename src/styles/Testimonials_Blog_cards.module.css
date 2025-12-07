@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: rgb(255, 255, 255);
     padding-left: 35px;
     padding-bottom: 65px;
@@ -45,4 +45,28 @@
     font-size: 16px;
     line-height: 26px;
     margin-top: 20px;
+}
+
+
+
+.container p.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 5 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container p.description.expanded {
+    -webkit-line-clamp: unset; /* Show full text */
+}
+
+.seeMoreBtn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #008000;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
 }

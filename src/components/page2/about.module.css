@@ -1,0 +1,29 @@
+
+
+
+.about_container{
+   background: #191919 url(../../assets/about_images/1.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 99px 0;
+}
+.header{
+    margin-left:50px;
+}
+.about_container h1{
+    color:white;
+    font-size:50px;
+    font-weight:600;
+}
+
+
+.tab_container{
+  display: flex;
+  gap:10px;
+  color:white;
+  font-size:20px;
+  margin-top:20px;
+}
+.navigation_link{
+    text-decoration:none;
+    color:white;
+}

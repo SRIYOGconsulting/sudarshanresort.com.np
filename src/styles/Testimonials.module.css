@@ -2,6 +2,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(202, 200, 200);
     padding: 100px 20px;
@@ -22,58 +23,33 @@
     margin: 10px auto 0;
 }
 
-
-/* ---------------------------------------
-   CAROUSEL — 3 CARDS VISIBLE & CENTERED
----------------------------------------- */
-.carousel {
-     width: 1290px;
-    overflow: hidden;
-    margin-top: 30px;
+/* Cards row - 3 cards per row */
+.cards_row {
     display: flex;
-    padding: 0;
-   
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 30px;
+    margin-top: 20px;
+    width: 80%;
 }
 
-
-
-.blog {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    
+/* Each card width */
+.cards_row > div {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    /* margin-bottom: 30px; */
 }
 
-
-/* Each card */
-.blog > div {
-    flex: 0 0 350px;
-    margin-right: 120px;
-    
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .cards_row > div {
+        flex: 0 0 calc(50% - 20px); /* 2 per row on tablet */
+    }
 }
 
-.blog > div:last-child {
-    margin-right: 15px;
-    
-}
-
-
-/* Dots */
-.container_dot {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    gap: 10px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background-color: #008000;
+@media screen and (max-width: 768px) {
+    .cards_row > div {
+        flex: 0 0 100%; /* 1 per row on mobile */
+    }
 }
