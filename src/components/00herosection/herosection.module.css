@@ -1,0 +1,30 @@
+
+.about_container{
+   background: #191919 url(../../assets/about_images/aboutus_Hero/1.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 99px 0;
+}
+.header{
+    margin-left:20%;
+}
+.about_container h1{
+    color:white;
+    font-size:50px;
+    font-weight:600;
+}
+
+
+.tab_container{
+  display: flex;
+  gap:10px;
+  color:white;
+  font-size:20px;
+  margin-top:20px;
+}
+.navigation_link{
+    text-decoration:none;
+    color:white;
+}
+.navigation_link:hover{
+    color: green;
+}
