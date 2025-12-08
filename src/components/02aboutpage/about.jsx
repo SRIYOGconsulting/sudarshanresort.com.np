@@ -2,22 +2,30 @@
 
 
 import img1 from '../../assets/about_images/aboutus/aboutus.jpg'
-import Aboutpage from '../00herosection/herosection.jsx'
-import style from './about.module.css'
 import img2 from  '../../assets/about_images/promoting/1.jpg'
 import img3 from '../../assets/about_images/promoting/2.jpg'
 import img4 from '../../assets/about_images/promoting/3.jpg'
-// import React from 'react'
+
+import style from './about.module.css'
+
+import Herosection from '../00herosection/herosection.jsx'
+import About_feature_blog from './about_feature_blog.jsx'
+import Testimonial from '../01homepage/Testimonials/Testimonials.jsx'
+import EnjoyAgro from '../02aboutpage/about_enjoyagro_blog.jsx'
+import Footer from '../01homepage/Footer.jsx'
+import Home_page from '../01homepage/Home_page'
+import Nav_Bar from '../01homepage/Nav_Bar'
 const about = () => {
   const promoting=[
-    {img:img1},
     {img:img2},
     {img:img3},
     {img:img4},
   ]
   return (
-    <div>
-      <Aboutpage h1="About" tab="Home" p="about"/>
+    <div className={style.about}>
+      <Home_page />
+      <Nav_Bar />
+      <Herosection h1="About" tab="Home" p="about"/>
       <div className={style.aboutus_container}>
         <h1>About Us</h1>
         <div className={style.line}></div>
@@ -30,10 +38,22 @@ const about = () => {
           <img src={img1} className={style.img1} alt="aboutimg" />
         </div>
       </div>
+      
+      {/* promoting tourism blog */}
       <div className={style.promoting_container}>
         <h1>"Promoting Tourism"</h1>
-        <img src={promoting.img} alt="" />
+        <div className={style.image_container}>
+        {promoting.map((promote,index)=>(
+          <img key={index} src={promote.img} alt="" />
+        ))}
+        </div>
+        
       </div>
+      {/* Feature blog of about page */}
+     <About_feature_blog/>
+     <Testimonial/>
+     <EnjoyAgro />
+     <Footer/>
     </div>
   )
 }

@@ -22,12 +22,12 @@ const Nav_Bar = () => {
       </div>
     <div className={style.nav_button_both_container}>
       <ul className={style.nav_menu}>
-        <Link to={'/'} class={style.li}>Home</Link>
-        <Link to={'/about'} class={style.li}>About</Link>
-        <Link to={'/rooms'} class={style.li}>Rooms</Link>
-        <Link to={'/services'} class={style.li}>Services</Link>
-        <Link to={'/gallery'} class={style.li}>Gallery</Link>
-        <Link to={'/contact'} class={style.li}>Contact</Link>
+        <Link to={'/'} className={style.li}>Home</Link>
+        <Link to={'/about'} className={style.li}>About</Link>
+        <Link to={'/rooms'} className={style.li}>Rooms</Link>
+        <Link to={'/services'} className={style.li}>Services</Link>
+        <Link to={'/gallery'} className={style.li}>Gallery</Link>
+        <Link to={'/contact'} className={style.li}>Contact</Link>
       </ul>
       
       <button  className={style.book_btn}>BOOK NOW</button>

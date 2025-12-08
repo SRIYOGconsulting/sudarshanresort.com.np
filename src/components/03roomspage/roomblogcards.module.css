@@ -1,0 +1,40 @@
+.roomcard_container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space; */
+    align-items: center;
+   
+   
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #F3F3F3;
+    /* background-color: red; */
+    padding: 100px 0;
+}
+.roomcard_container img{
+    width: 40%;
+    height: auto;
+
+    object-fit: cover;
+}
+.price_container{
+    display: flex;
+ align-items: center;
+   
+}
+.price_container p{
+  color: #787878;
+    font-size: 18px;
+}
+.price_container h1{
+  color: #232323;
+    font-family: 'Lora';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    }   
+.roomcard_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
