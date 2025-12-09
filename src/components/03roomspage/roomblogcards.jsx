@@ -4,8 +4,16 @@ import style from "./roomblogcards.module.css";
 
 const roomblogcards = (props) => {
   return (
-    <div className={style.roomcard_container}>
+
+     <div className={style.roomcard_container}>
+       <div className={style.imageWrapper}>
       <img src={props.img} alt="" />
+        <div className={style.overlay}>
+        <button className={style.bookbtn}>Book Now</button>
+        </div>
+      </div>
+      
+      
       <div className={style.roomcard_content}>
       <h2>{props.bedtype}</h2>
       <div className={style.price_container}>
@@ -13,7 +21,8 @@ const roomblogcards = (props) => {
         <p>{props.pernight}</p>
       </div>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

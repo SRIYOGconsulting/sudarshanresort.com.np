@@ -15,6 +15,9 @@ import Footer from './components/01homepage/Footer.jsx'
 import Whatsapp_logo from './components/01homepage/whatsapp_logo.jsx'
 import About from './components/02aboutpage/about.jsx'
 import Room from './components/03roomspage/room.jsx'
+import Services from './components/04servicespage/services.jsx'
+
+import enjoyagro from './assets/enjoy_agro.jpg'
 const App = () => {
   return (
     <Routes>
@@ -30,7 +33,7 @@ const App = () => {
       <Container2/>
       <Our_Accomodation/>
       <Facilities_blogcards/>
-      <EnjoyAgro />
+      <EnjoyAgro bg={enjoyagro}/>
       <Testimonials/>
       <Footer />
       <Whatsapp_logo />
@@ -38,6 +41,7 @@ const App = () => {
       } />
       <Route path="/about" element={<About />} />
       <Route path='/rooms' element={<Room />} />
+      <Route path='/services' element={<Services />} />
     
     </Routes>
   )

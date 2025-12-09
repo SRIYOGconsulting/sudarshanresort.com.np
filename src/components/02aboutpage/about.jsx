@@ -5,13 +5,14 @@ import img1 from '../../assets/about_images/aboutus/aboutus.jpg'
 import img2 from  '../../assets/about_images/promoting/1.jpg'
 import img3 from '../../assets/about_images/promoting/2.jpg'
 import img4 from '../../assets/about_images/promoting/3.jpg'
+import enjoy from '../../assets/about_images/enjoyagroresort/1.jpg'
 
 import style from './about.module.css'
 
 import Herosection from '../00herosection/herosection.jsx'
 import About_feature_blog from './about_feature_blog.jsx'
 import Testimonial from '../01homepage/Testimonials/Testimonials.jsx'
-import EnjoyAgro from '../02aboutpage/about_enjoyagro_blog.jsx'
+import EnjoyAgro from '../01homepage/EnjoyAgro.jsx'
 import Footer from '../01homepage/Footer.jsx'
 import Home_page from '../01homepage/Home_page'
 import Nav_Bar from '../01homepage/Nav_Bar'
@@ -52,7 +53,7 @@ const about = () => {
       {/* Feature blog of about page */}
      <About_feature_blog/>
      <Testimonial/>
-     <EnjoyAgro />
+     <EnjoyAgro bg={enjoy} />
      <Footer/>
     </div>
   )

@@ -2,10 +2,11 @@
 .room_container{
   
 }
+
 .roomblogcard{
+  /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 40px; */
-    background-color: red;
+    flex-direction: row;
+    /* gap:40px; */
 }
