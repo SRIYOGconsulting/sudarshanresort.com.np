@@ -28,9 +28,10 @@ const Nav_Bar = () => {
         <Link to={'/services'} className={style.li}>Services</Link>
         <Link to={'/gallery'} className={style.li}>Gallery</Link>
         <Link to={'/contact'} className={style.li}>Contact</Link>
+        
       </ul>
       
-      <button  className={style.book_btn}>BOOK NOW</button>
+      <button  className={style.book_btn}><Link to={'/book'} className={style.linkbook}>Book Now</Link></button>
       </div>
     </nav>
   )

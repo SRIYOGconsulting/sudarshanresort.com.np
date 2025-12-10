@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/Content_Over_Img.css";
+import style from "../../styles/Content_Over_Img.module.css";
 
 const Content_Over_Img = () => {
   
   const texts = [
     "Luxury Hotel & Resort",
-    "Comfort Redefined",
+    "Redefined",
     "Experience Calmness",
   ];
 
@@ -53,19 +53,19 @@ const Content_Over_Img = () => {
 
   return (
      
-      <div className="topcontainer">
-     <p className="top">Luxury hotel & Resort Lifestyle</p>
-     <div className="container">
-    <div className="typing-container">
-      <h1 className="comfort">Comfort</h1>
-      <span className="typing-text">
+      <div className={style.topcontainer}>
+     <p className={style.top}>Luxury hotel & Resort Lifestyle</p>
+     <div className={style.container}>
+    <div className={style.typing_container}>
+      <h1 className={style.comfort}>Comfort</h1>
+      <span className={style.typing_text}>
         {texts[index].substring(0, subIndex)}
       </span>
-      <span className={`cursor ${blink ? "blink" : ""}`}>|</span>
+   <span className={`${style.cursor} ${blink ? style.blink : ""}`}>|</span>
     </div>
     </div>
-    <h1 className="for_your_vacation">for your Vacation</h1>
-    <button className="book_now_btn">Book now</button>
+    <h1 className={style.for_your_vacation}>for your Vacation</h1>
+    <button className={style.book_now_btn}>Book now</button>
    
    </div>
     

@@ -14,7 +14,7 @@ import About_feature_blog from './about_feature_blog.jsx'
 import Testimonial from '../01homepage/Testimonials/Testimonials.jsx'
 import EnjoyAgro from '../01homepage/EnjoyAgro.jsx'
 import Footer from '../01homepage/Footer.jsx'
-import Home_page from '../01homepage/Home_page'
+import Top from '../01homepage/top.jsx'
 import Nav_Bar from '../01homepage/Nav_Bar'
 const about = () => {
   const promoting=[
@@ -24,7 +24,7 @@ const about = () => {
   ]
   return (
     <div className={style.about}>
-      <Home_page />
+      <Top />
       <Nav_Bar />
       <Herosection h1="About" tab="Home" p="about"/>
       <div className={style.aboutus_container}>

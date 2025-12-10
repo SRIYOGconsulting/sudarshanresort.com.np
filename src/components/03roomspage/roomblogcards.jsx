@@ -1,28 +1,37 @@
 import React from "react";
 import style from "./roomblogcards.module.css";
+import img1 from "../../assets/rooms_images/room1.jpg";
+import img2 from '../../assets/rooms_images/room2.jpg'
 
-
-const roomblogcards = (props) => {
+const roomblogcards = () => {
+  const roomcontent=[
+    {img:img1,title:"Twin Bed",price:"2500", per:"/per night" },
+    {img:img2,title:"Twin Bed",price:"2500", per:"/per night" },
+  ]
   return (
 
      <div className={style.roomcard_container}>
+      <div className={style.roo}>
+      {roomcontent.map((get,id)=>(
+        <div className={style.roomcard} key={id}>
        <div className={style.imageWrapper}>
-      <img src={props.img} alt="" />
+      <img src={get.img} alt="" />
         <div className={style.overlay}>
         <button className={style.bookbtn}>Book Now</button>
         </div>
       </div>
-      
-      
+
       <div className={style.roomcard_content}>
-      <h2>{props.bedtype}</h2>
+      <h2>{get.title}</h2>
       <div className={style.price_container}>
-        <h1>{props.price}</h1>
-        <p>{props.pernight}</p>
+        <h1>{get.price}</h1>
+        <p >{get.per}</p>
       </div>
       </div>
       </div>
-    
+        ))}
+      </div>
+    </div>
   );
 };
 

@@ -31,17 +31,17 @@ const Footer = () => {
       <div className={style.container_contact_info}>
         <h2>Get in Touch</h2>
         <div className={style.location_container}>
-          <MapPin color="white" size={20} />
+          <MapPin className={style.mappin} color="white" size={20} />
           <p>Lalbhitti, Belbari-2, Morang, Nepal</p>
         </div>
 
         <div className={style.phone_container}>
-          <PhoneCall color='white' size={20}/>
+          <PhoneCall className={style.mappin} color='white' size={20}/>
           <p>+977-9852020058</p>
         </div>
 
         <div className={style.mail_container}>
-          <Mail color='white' size={20}/>
+          <Mail className={style.mappin} color='white' size={20}/>
           <p>booking@sudarshanagroresort.com.np</p>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Footer = () => {
     
       <div className={style.container_bottom}>
         <p>Copyright © 2025 Sudarshan Agro Resort. All rights reserved.</p>
-        <p>Technology Partner : <Link to="/pracas.net">PRACAS</Link></p>
+        <p>Technology Partner : <Link className={style.pracas} to="/pracas.net">PRACAS</Link></p>
       </div>
       
     </div>

@@ -1,16 +1,14 @@
 
 .Container{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    flex-wrap: wrap;
     background-color: #3d7703;
     
 }
 .mainContainer{
     display: flex;
-    flex-direction: row; 
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -18,25 +16,25 @@
 }
 .phoneContainer{
     display: flex;
-    flex-direction: row;
+    align-items: center;
     gap: 10px;
 }
 .phoneContainer p{
     color: white;
+    margin-bottom: 12px;
 }
 
 
 
 .emailContainer{
     display: flex;
-    flex-direction: row;
-     justify-content: center;
     align-items: center;
     gap : 10px;
 }
 
 .emailContainer p{
     color: white;
+    margin-bottom: 12px;
 }
 
 

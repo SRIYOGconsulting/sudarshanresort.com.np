@@ -5,7 +5,7 @@
   left: 0;
    z-index: 1000;  
   width: 100%;
-  height: 120px;
+  height: 110px;
   background: #1a1a1a;
   display: flex;
   align-items: center;
@@ -50,6 +50,7 @@
     margin-right: 100px;
 }
 
+
 .li {
   color: white;
   font-size: 17px;
@@ -71,15 +72,21 @@
   background: #4d9221;
   border: none;
   color: white;
-  font-size: 15px;
+  /* font-size: 15px; */
   padding: 12px 30px;
-  /* border-radius: 4px; */
+ 
   cursor: pointer;
-  letter-spacing: 2px;
+
   transition: 0.3s;
 }
 
 .book_btn:hover {
   background: #fff;
     color: #4d9221;
+}
+
+.linkbook{
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
 }

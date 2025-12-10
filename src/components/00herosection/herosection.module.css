@@ -16,10 +16,14 @@
 
 .tab_container{
   display: flex;
+  align-items: center;
   gap:10px;
   color:white;
   font-size:20px;
   margin-top:20px;
+}
+.tab_container p{
+    margin-bottom: 10px;
 }
 .navigation_link{
     text-decoration:none;

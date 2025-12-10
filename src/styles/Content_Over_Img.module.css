@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .container{
     text-align: center;
     position: absolute;
@@ -26,7 +22,7 @@
    
 }
 
-.typing-container {
+.typing_container {
   font-size: 55px;
   font-family: 'Playfair Display';
   font-weight: 700;
@@ -80,7 +76,7 @@
     margin-left: 24.5%;
 }
 
-.typing-text{
+.typing_text{
   font-style: italic;
   font-family: 'Lora';
 }

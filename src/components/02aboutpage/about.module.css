@@ -1,11 +1,5 @@
 
-.about{
-  /* position:;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  background: white; */
-}
+
 .aboutus_container {
   display: flex;
   flex-direction: column;

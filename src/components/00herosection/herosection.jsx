@@ -12,7 +12,7 @@ const herosection = (props) => {
         <h1>{props.h1}</h1>
         <div className={style.tab_container}>
         <Link to={'/'} className={style.navigation_link}>{props.tab}</Link>
-        <p>  {`> ${props.p}`}</p>
+        <p>{`> ${props.p}`}</p>
         </div>
         </div>
         
