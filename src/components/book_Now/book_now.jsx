@@ -9,7 +9,7 @@ const book_now = () => {
     <div>
       <Top />
       <Nav_bar />
-      <Hero />
+      <Hero h1="Booking" tab="Home" p="Booking"/>
       <Booking_Form />
       <Footer/>
     </div>
