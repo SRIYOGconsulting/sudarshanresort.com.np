@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import style from "./booking_form.module.css";
 import FilterDropdown from "./filter";
-import { ChevronDown } from "lucide-react";
-
+// import { ChevronDown } from "lucide-react";
+import Report from './report'
 const Booking_form = () => {
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({ purpose: "Stay" ,stay:"1 Day",bed_type:"",room_type:"", room_quantity:"1",travel_assistance:""});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+   
   const purposeOptions = [
     { label: "Stay", color: "#d1dfd2ff" },
     { label: "Business", color: "#32c7b3ff" },
     { label: "Travelling", color: "#70eeffff" },
     { label: "Event / Function", color: "#ccffee" },
   ];
+  
   
     const stayDuration = [
     { label: "1 Day", color: "#d1dfd2ff" },
@@ -48,6 +49,16 @@ const travelAssistance=[
      { label: "Yes", color: "#00ffbfff" },
     { label: "No", color: "#32c7b3ff" },
 ]
+
+const handleOpenCalendar = (e) => {
+  // force open date picker
+  requestAnimationFrame(() => e.target.showPicker());
+};
+//  const [showReport, setShowReport] = useState(<Report/>);
+// const reporthandler=()=>{
+//     setShowReport(showReport);
+// }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -96,6 +107,7 @@ const travelAssistance=[
           </span>
         )}
         <input
+            className={style.borderinput}
           type="text"
           id="fullname"
           onChange={(e) => {
@@ -118,10 +130,7 @@ const travelAssistance=[
           errors={errors}
           setErrors={setErrors}
           
-          
-          
         />
-        <ChevronDown className={style.gender_icon}/>   
         
         <FilterDropdown
           label="Country"
@@ -136,8 +145,7 @@ const travelAssistance=[
           errors={errors}
           setErrors={setErrors}
         />
-        {/* <ChevronDown className={style.country_icon}/>  */}
-
+        
         <label className={style.label} htmlFor="phone">
           State/Province <span className={style.star}>*</span>
         </label>
@@ -149,7 +157,7 @@ const travelAssistance=[
         )}
         <input
           type="text"
-          className={style.input}
+           className={`${style.borderinput} ${style.input}` }
           id="state"
           onChange={(e) => {
             setForm({ ...form, state: e.target.value });
@@ -168,6 +176,7 @@ const travelAssistance=[
           </span>
         )}
         <input
+         className={style.borderinput}
           type="text"
           id="city"
           onChange={(e) => {
@@ -186,6 +195,7 @@ const travelAssistance=[
           </span>
         )}
         <input
+        className={style.borderinput}
           type="text"
           id="phone"
           onChange={(e) => {
@@ -197,7 +207,7 @@ const travelAssistance=[
         <label className={style.label} htmlFor="whatsapp">
           WhatsApp
         </label>
-        <input type="text" id="whatsapp" />
+        <input className={style.borderinput} type="text" id="whatsapp" />
 
         <FilterDropdown
           label="Purpose"
@@ -208,6 +218,7 @@ const travelAssistance=[
           errors={errors}
           setErrors={setErrors}
         />
+        
 
         <label className={style.label} htmlFor="number">
           Number of Guests <span className={style.star}>*</span>
@@ -218,9 +229,9 @@ const travelAssistance=[
             submitting.
           </span>
         )}
-        {/* input for numbwe of guests */}
+        {/* input for number of guests */}
        <input
-  className={style.number}
+  className={`${style.number} ${style.borderinput}`}
   type="text"
   id="number"
   inputMode="numeric"
@@ -263,6 +274,7 @@ const travelAssistance=[
           errors={errors}
           setErrors={setErrors}
         />
+        
 
         <FilterDropdown
           label="Room Quantity"
@@ -288,12 +300,12 @@ const travelAssistance=[
           Message
         </label>
         <textarea
-  id="message"
-  className={style.messageBox}
-  onChange={(e) => {
-    setForm({ ...form, message: e.target.value });
-  }}
-></textarea>
+            id="message"
+            className={style.messageBox}
+            onChange={(e) => {
+                setForm({ ...form, message: e.target.value });
+            }}
+        ></textarea>
 
 
         <FilterDropdown
@@ -319,9 +331,11 @@ const travelAssistance=[
           </span>
         )}
         <input
-        className={style.date}
+        className={`${style.date} ${style.borderinput}`}
           type="date"
           id="arrival_date"
+          onFocus={(e) => e.target.showPicker()}
+          onClick={handleOpenCalendar}
           onChange={(e) => {
             setForm({ ...form, arrival_date: e.target.value });
             setErrors({ ...errors, arrival_date: false });
@@ -364,7 +378,7 @@ const travelAssistance=[
         </div>
 
         <button className={style.btn_submit}>Submit</button>
-        <span className={style.donot_submit}>Do not submit passwords through this form.</span>
+        {/* <span className={style.donot_submit}>Do not submit passwords through this form. <button  onClick={reporthandler}>Report malicious form</button></span> */}
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState,useEffect,useRef } from "react";
 import style from "./filter.module.css"; // use your own CSS
+import { ChevronDown } from "lucide-react";
 
 const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }) => {
   const [search, setSearch] = useState("");
@@ -30,14 +31,14 @@ const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }
   return (
     <div className={style.dropdownContainer} ref={dropdownRef}>
         <div className={style.label_and_span}>
-      <label htmlFor={id} className={style.label}>{label}</label>
+      <label htmlFor={id} className={style.label}>{label}<span className={style.astric}>*</span> </label>
       {errors[id] && <span className={style.error}>This field is required. You have to enter something before
             submitting.</span>}
         </div>
      
 
 <div
-  className={style.dropdownBox}
+  className={`${style.dropdownBox} ${open ? style.activeDropdown : ""}`}
   onClick={() => setOpen(!open)}
 >
   { form[id] ? (
@@ -50,13 +51,10 @@ const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }
       }}
     >
       {form[id]}
-    </span>
-  ) : (
-    ""
-  )}
+        </span>
+  ) : ("")}
+    <span className={style.dropdownIcon}><ChevronDown /> </span>
 </div>
-
-
 
       {open && (
         <div className={style.dropdownList}>
