@@ -3,6 +3,14 @@
   width: 100%;
   
 }
+.li_drop_for_hover{
+  display: flex;
+}
+.li_drop_for_hover:hover{
+  background-color: rgb(241, 236, 236);
+
+  
+}
 .label{
     display: flex;
         font-size: 18px;

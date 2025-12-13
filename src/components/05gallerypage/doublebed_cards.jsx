@@ -1,4 +1,5 @@
-import useState  from 'react';
+import { useState } from 'react';
+
 // import React from 'react'
 import img1 from '../../assets/gallery_images/doublebed/doublebed1.jpg'
 import img2 from '../../assets/gallery_images/doublebed/doublebed2.jpg'
@@ -10,7 +11,7 @@ import img6 from '../../assets/gallery_images/doublebed/doublebed6.jpg'
 import style from './double_cards.module.css'
 import { SquareArrowOutUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const doublebed_cards = () => {
+const Doublebed_cards = () => {
     const images = [img1,img2,img3,img4,img5,img6];
      const [currentIndex, setCurrentIndex] = useState(null);
     
@@ -58,7 +59,7 @@ const doublebed_cards = () => {
             color="white"
             size={40}
              onClick={(e) => {
-    e.stopPropagation(); // prevent bubbling
+    e.stopPropagation(); 
     prevImage();
   }}
           />
@@ -67,10 +68,9 @@ const doublebed_cards = () => {
             className={`${style.navBtn} ${style.rightNav}`}
             color="white"
             size={40}
-            
-           onClick={(e) => {
-    e.stopPropagation(); // prevent bubbling
-    nextImage();
+            onClick={(e) => {
+          e.stopPropagation();
+          nextImage();
   }}
           />
         </div>
@@ -79,4 +79,4 @@ const doublebed_cards = () => {
   )
 }
 
-export default doublebed_cards
+export default Doublebed_cards

@@ -1,12 +1,29 @@
 import React, { useState } from "react";
 import style from "./booking_form.module.css";
 import FilterDropdown from "./filter";
-// import { ChevronDown } from "lucide-react";
-import Report from './report'
+import { X } from "lucide-react";
+// import Report from './report'
 const Booking_form = () => {
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({ purpose: "Stay" ,stay:"1 Day",bed_type:"",room_type:"", room_quantity:"1",travel_assistance:""});
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  
+    const [showReportModal, setShowReportModal] = useState(false);
+   // Report button handler
+  const reporthandler = () => {
+    setShowReportModal(true); // show the modal
+  };
+
+  const closeReportModal = () => {
+    setShowReportModal(false); // hide the modal
+  };
+
+ 
+   
+   
+   
+   
    
   const purposeOptions = [
     { label: "Stay", color: "#d1dfd2ff" },
@@ -49,6 +66,11 @@ const travelAssistance=[
      { label: "Yes", color: "#00ffbfff" },
     { label: "No", color: "#32c7b3ff" },
 ]
+// adding here report
+
+//   const closeReportModal = () => {
+//     setShowReportModal(false); // hide the modal
+//   };
 
 const handleOpenCalendar = (e) => {
   // force open date picker
@@ -62,7 +84,7 @@ const handleOpenCalendar = (e) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    // setIsSubmitted(true);
     const newErrors = {};
 
     const requiredFields = [
@@ -80,22 +102,27 @@ const handleOpenCalendar = (e) => {
     ];
 
     requiredFields.forEach((field) => {
-      const value = form[field];
-      if (!value) {
-        newErrors[field] = true;
-      }
+    //   const value = form[field];
+       if (!form[field]) {
+      newErrors[field] = true;
+    }
     });
 
     setErrors(newErrors);
+      if (Object.keys(newErrors).length === 0) {
+    setIsSubmitted(true); 
+  }
   };
 
   return (
-    <div className={style.container}>
+    <div   className={`${style.container} ${
+    showReportModal ? style.noScroll : ""
+  }`}>
       <div className={style.header}>
         <h2 className={style.resort_booking_from}>Resort Booking Form</h2>
-        <p>Booking at your fingertips.</p>
+        <p className={style.bookatyour_fingertips}>Booking at your fingertips.</p>
       </div>
-      <form className={style.form} onSubmit={handleSubmit}>
+      <form className={style.form} onSubmit={handleSubmit} >
         <label className={style.label} htmlFor="fullname">
           Full Name <span className={style.star}>*</span>
         </label>
@@ -118,9 +145,10 @@ const handleOpenCalendar = (e) => {
 
         <FilterDropdown
           label="Gender"
+          astric="*"
           id="gender"
           options={[
-            { label: "Mail", color: "#00ffbfff" },
+            { label: "Male", color: "#00ffbfff" },
             { label: "Female", color: "#32c7b3ff" },
             { label: "Others", color: "#70eeffff" },
             { label: "Rather not to say", color: "#70eeffff" },
@@ -134,6 +162,7 @@ const handleOpenCalendar = (e) => {
         
         <FilterDropdown
           label="Country"
+          astric="*"
           id="country"
           options={[
             { label: "Nepal", color: "#d1dfd2ff" },
@@ -267,6 +296,7 @@ const handleOpenCalendar = (e) => {
 
          <FilterDropdown
           label="Room Type"
+          astric="*"
           id="room_type"
           options={roomType}
           form={form}
@@ -278,6 +308,7 @@ const handleOpenCalendar = (e) => {
 
         <FilterDropdown
           label="Room Quantity"
+        //   astric="*"
           id="room_quantity"
           options={roomQuantity}
           form={form}
@@ -310,6 +341,7 @@ const handleOpenCalendar = (e) => {
 
         <FilterDropdown
           label="Bed Type"
+          astric="*"
           id="bed_type"
           options={bedType}
           form={form}
@@ -355,15 +387,15 @@ const handleOpenCalendar = (e) => {
         />
 
         {/* hidden content */}
-        <div>
+        <div className={style.error_list_all}>
           {/* Show this message ONLY after submit & if ANY error exists */}
-          {isSubmitted && Object.keys(errors).length > 0 && (
-            <span className={style.error_content}>
+          {Object.values(errors).some((val) => val) && (
+            <span className={style.all_error}>
               Looks like you missed some of the required fields:
             </span>
           )}
 
-          <ul>
+          <ul className={style.ul_error}>
             {errors["fullname"] && <li className={style.li_all}>Full Name</li>}
             {errors["gender"] && <li className={style.li_all}>Gender</li>}
             {errors["country"] && <li className={style.li_all}>Country</li>}
@@ -377,9 +409,65 @@ const handleOpenCalendar = (e) => {
           </ul>
         </div>
 
-        <button className={style.btn_submit}>Submit</button>
-        {/* <span className={style.donot_submit}>Do not submit passwords through this form. <button  onClick={reporthandler}>Report malicious form</button></span> */}
+        <button className={style.btn_submit} type="submit" > Submit</button>
+        <span className={style.donot_submit}>Do not submit passwords through this form. <button className={style.reportbtn}   type="button"
+  onClick={(e) => {
+    e.preventDefault();
+    reporthandler();
+  }}>Report malicious form</button></span>
+        
+        {isSubmitted && <div className={style.thankyou_container} ><h1>Thank you for submiting the form </h1></div>}
+        
+        
+        {showReportModal &&
+        <div className={`${style.overlay} ${style.overlayActive}`}  >
+        <div  className={`${style.modalBox} ${style.modalActive}`}  onClick={(e) => e.stopPropagation()}>
+            <form className={style.popupform}>
+       <div  >
+        <h2 className={style.h2}>
+          Report a malicious form
+          <X size={20}  onClick={closeReportModal} style={{ cursor: "pointer" }} />
+        </h2>
+        <div className={style.line}></div>
+      </div>
+
+      <div>
+        <span className={style.content}>
+          Please briefly describe how this form is being misused. Our team will
+          review your report as soon as possible.
+        </span>
+        <div className={style.selector_textarea_wrapper}>
+            <div className={style.input_span}>
+            <input type="radio" name="report_type" className={style.selector}/><span className={style.span}>Spam, malware, or phishing</span>
+            </div>
+            <div className={style.input_span}>
+            <input type="radio" name="report_type" className={style.selector}/><span className={style.span}>Other (please explain)</span>
+            </div>
+            <textarea className={style.textarea} placeholder="Optionally, please briefly describe how this form is being misused." name="text" id="textarea"></textarea>
+        </div>
+        
+      </div>
+      
+    <div className={style.btn_container}>
+        <button onClick={(e) => {
+            e.preventDefault();
+            closeReportModal();
+        }} className={style.btn_cancle}>Cancel</button>
+        <button onClick={reporthandler} className={style.btn}>Submit</button>
+      </div>
+     
+      
+      
+     </form>
+      
+    </div>
+    </div>
+        
+        }
+    
+        
       </form>
+      
     </div>
   );
 };

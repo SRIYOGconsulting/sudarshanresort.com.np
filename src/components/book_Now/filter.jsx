@@ -2,7 +2,7 @@ import React, { useState,useEffect,useRef } from "react";
 import style from "./filter.module.css"; // use your own CSS
 import { ChevronDown } from "lucide-react";
 
-const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }) => {
+const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors,astric }) => {
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -31,7 +31,7 @@ const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }
   return (
     <div className={style.dropdownContainer} ref={dropdownRef}>
         <div className={style.label_and_span}>
-      <label htmlFor={id} className={style.label}>{label}<span className={style.astric}>*</span> </label>
+      <label htmlFor={id} className={style.label}>{label}<span className={style.astric}>{astric}</span> </label>
       {errors[id] && <span className={style.error}>This field is required. You have to enter something before
             submitting.</span>}
         </div>
@@ -68,19 +68,19 @@ const FilterDropdown = ({ label, id, options, form, setForm, errors, setErrors }
 
           <ul className={style.optionsList}>
                 {filteredOptions.map((opt, index) => (
-         <li
+        <div className={style.li_drop_for_hover} onClick={()=>{setForm({ ...form, [id]: opt.label }); setErrors({ ...errors, [id]: false }); setOpen(false); setSearch("");}}> <li
         key={index}
         className={style.listofdrop_down}
         style={{ background: opt.color }}
         onClick={() => {
-        setForm({ ...form, [id]: opt.label });
-        setErrors({ ...errors, [id]: false });
-        setOpen(false);
-        setSearch("");
+        // setForm({ ...form, [id]: opt.label });
+        // setErrors({ ...errors, [id]: false });
+        // setOpen(false);
+        // setSearch("");
         }}
          >
         {opt.label}
-        </li>
+        </li></div>
         ))}
 
 
