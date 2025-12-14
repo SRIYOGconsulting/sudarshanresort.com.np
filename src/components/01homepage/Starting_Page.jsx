@@ -8,7 +8,7 @@ const Starting_Page = () => {
   // Auto redirect after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/home");  // your homepage route
+      navigate("/home");  
     }, 3000);
 
     return () => clearTimeout(timer); // cleanup

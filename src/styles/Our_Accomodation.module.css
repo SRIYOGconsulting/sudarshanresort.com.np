@@ -51,6 +51,7 @@ display: inline-block;
     max-width: 100%;
     line-height: 52px;
     text-align: center;
+    text-decoration: none;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     background-color: #F4F4F4;
@@ -113,18 +114,19 @@ display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0); /* hidden by default */
+    transform: translate(-50%, -50%) scale(0); 
     opacity: 0;
     padding: 12px 25px;
     font-size: 18px;
     font-family: 'Poppins';
     font-weight: 500;
-   
-    /* background-color: none; */
     border: none;
     background: none;
     cursor: pointer;
     transition: all 0.2s ease;
+}
+.book_now{
+   text-decoration: none;
 }
 
 .img_wrap:hover .book_now {
@@ -166,6 +168,7 @@ display: inline-block;
     bottom: 60px; /* slightly above p1 */
     left: 20px;
     color: #ffffff;
+    text-decoration: none;
     background: green;
     border: none;
     padding: 6px 14px;

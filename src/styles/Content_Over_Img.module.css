@@ -58,7 +58,14 @@
   margin-right: 25px;
 
 }
-
+.h1_Link_btn_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+}
 .for_your_vacation{
   font-size: 55px;
   font-weight: 700;
@@ -82,11 +89,13 @@
 }
 
 .book_now_btn{
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-right: 300px;
   padding: 10px 20px;
   font-size: 18px;
   background-color: #4d9221;
   color: white;
+  text-decoration: none;
   border: none;
   border-radius: 5px;
   cursor: pointer;

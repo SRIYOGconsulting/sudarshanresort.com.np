@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../../styles/container2.module.css'
 import Sudarshanabout from '../../assets/SudarshanAbout.jpg'
+import { Link } from 'react-router-dom'
 const container2 = () => {
   return (
     <div className={style.container}>
@@ -16,7 +17,7 @@ const container2 = () => {
           
           
           <p className={style.para}>Welcome to Sudarshan Park and Resort! Here, peacefulness mixes with Nepali customs. Situated in lush greenery, our haven calls you to relax and enjoy Nepal's essence. Immerse yourself in our lively culture, enjoying real food and fun activities. With cozy rooms and fair prices, we promise your stay will be unforgettable. Come, relax, and immerse yourself in the beauty of Nepal, right here with us. Welcome to a unique getaway!</p>
-          <button className={style.about_btn}>About</button>
+          <Link to="/about" className={style.about_btn}>About</Link>
         </div>
        
         

@@ -12,6 +12,7 @@ import Contact from './components/06contactpage/contact.jsx'
 import ScrollToTop from "./components/01homepage/scrolltop.jsx";
 import Book_Now from './components/book_Now/book_now.jsx'
 
+
 const App = () => {
   return (
   <>
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/gallery' element={<Gallery />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/book' element={<Book_Now />} />
+        
     </Routes>
     </>
   )

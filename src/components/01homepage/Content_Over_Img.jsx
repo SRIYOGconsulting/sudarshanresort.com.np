@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "../../styles/Content_Over_Img.module.css";
-
+import { Link } from "react-router-dom";
 const Content_Over_Img = () => {
   
   const texts = [
@@ -64,9 +64,10 @@ const Content_Over_Img = () => {
    <span className={`${style.cursor} ${blink ? style.blink : ""}`}>|</span>
     </div>
     </div>
+    <div className={style.h1_Link_btn_wrapper}>
     <h1 className={style.for_your_vacation}>for your Vacation</h1>
-    <button className={style.book_now_btn}>Book now</button>
-   
+    <Link to="/book" className={style.book_now_btn}>Book now</Link>
+   </div>
    </div>
     
   );
