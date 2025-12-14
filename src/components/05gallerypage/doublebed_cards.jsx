@@ -12,7 +12,14 @@ import style from './double_cards.module.css'
 import { SquareArrowOutUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Doublebed_cards = () => {
-    const images = [img1,img2,img3,img4,img5,img6];
+    const images = [
+      {id:1, img:img1, size:"card1"},
+      {id:2, img:img2, size:"card2"},
+      {id:3, img:img3, size:"card3"},
+      {id:4, img:img4, size:"card4"},
+      {id:5, img:img5, size:"card5"},
+      {id:6, img:img6, size:"card6"}
+      ];
      const [currentIndex, setCurrentIndex] = useState(null);
     
       const openFullscreen = (index) => {
@@ -34,9 +41,9 @@ const Doublebed_cards = () => {
   return (
    <>
       <div className={style.container}>
-        {images.map((img, index) => (
-          <div className={style.imgcontainer} key={index}>
-            <img src={img} alt="img" />
+        {images.map((item, index) => (
+          <div className={`${style.imgcontainer} ${style[item.size]}`} key={index}>
+            <img src={item.img} alt="img" />
             <div className={style.overlay}>
               <SquareArrowOutUpRight
                 className={style.bookbtn}
