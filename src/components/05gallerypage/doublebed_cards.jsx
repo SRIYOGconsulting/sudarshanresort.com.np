@@ -70,7 +70,7 @@ const Doublebed_cards = () => {
     prevImage();
   }}
           />
-          <img src={images[currentIndex]} alt="fullscreen" className={style.fullscreenImg} />
+          <img src={images[currentIndex].img} alt="fullscreen" className={style.fullscreenImg} />
           <ChevronRight
             className={`${style.navBtn} ${style.rightNav}`}
             color="white"

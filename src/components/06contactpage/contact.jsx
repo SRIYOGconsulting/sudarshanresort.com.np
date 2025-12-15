@@ -5,7 +5,11 @@ import Hero from '../00herosection/herosection.jsx'
 import Footer from '../01homepage/Footer.jsx'
 import Nav_Bar from '../01homepage/Nav_Bar.jsx'
 import Whatsapp from '../01homepage/whatsapp_logo.jsx'
-const contact = () => {
+import { useEffect } from 'react'
+const Contact = () => {
+     useEffect(() => {
+        document.title = "Contact | Sudarshan Resort";
+      }, []);
   return (
     <div>
         <Top/>
@@ -18,4 +22,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

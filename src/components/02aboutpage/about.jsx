@@ -16,12 +16,18 @@ import EnjoyAgro from '../01homepage/EnjoyAgro.jsx'
 import Footer from '../01homepage/Footer.jsx'
 import Top from '../01homepage/top.jsx'
 import Nav_Bar from '../01homepage/Nav_Bar'
-const about = () => {
+ import { useEffect } from "react";
+const About = () => {
   const promoting=[
     {img:img2},
     {img:img3},
     {img:img4},
   ]
+ 
+ useEffect(() => {
+    document.title = "About | Sudarshan Resort";
+  }, []);
+  
   return (
     <div className={style.about}>
       <Top />
@@ -59,5 +65,5 @@ const about = () => {
   )
 }
 
-export default about
+export default About
   

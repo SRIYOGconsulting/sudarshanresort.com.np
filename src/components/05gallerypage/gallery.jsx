@@ -3,10 +3,12 @@ import Top from '../01homepage/top.jsx'
 import Navbar from '../01homepage/Nav_Bar.jsx'
 import Herosection from '../00herosection/herosection.jsx'
 import Allcards from '../05gallerypage/allcards.jsx'
-import Twinbed_cards from '../05gallerypage/twin_bed_cards.jsx'
-import Doublebed_cards from '../05gallerypage/doublebed_cards.jsx'
 import Footer from '../01homepage/Footer.jsx'
+ import { useEffect } from "react";
 const Gallery = () => {
+     useEffect(() => {
+      document.title = "Gallery | Sudarshan Resort";
+    }, []);
   return (
     <div>
       <Top/>

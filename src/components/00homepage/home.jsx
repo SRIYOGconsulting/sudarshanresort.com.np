@@ -12,7 +12,17 @@ import Footer from '../../components/01homepage/Footer.jsx'
 import Whatsapp_logo from '../../components/01homepage/whatsapp_logo.jsx'
 
 import enjoyagro from '../../assets/enjoy_agro.jpg'
-const home = () => {
+
+
+
+const Home = () => {
+
+ 
+
+  // return <h1>Home Page</h1>;
+
+
+
   return (
     <div>
        <Top />
@@ -30,4 +40,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
