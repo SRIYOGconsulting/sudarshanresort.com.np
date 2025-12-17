@@ -26,8 +26,7 @@ const EnjoyAgro = ({bg}) => {
       <div className={style.overlay5} > 
       <div className={style.frame_close_wrapper}>
       <iframe
-      width="860"
-      height="450"
+     
       className={style.frame}
       src="https://www.youtube.com/embed/dQw4w9WgXcQ"
       title="YouTube video player"

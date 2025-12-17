@@ -1,12 +1,12 @@
 .hero {
-  /* position: relative; */
+
   width: 100%;
-  /* min-height: 100vh;  */
   background-image:var(--bgImage);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;  /* image stays fixed while scrolling */
   overflow: hidden;
+  
 }
 
 .overlay {
@@ -48,12 +48,13 @@
 .hero_all_container{
   position: relative;
   
+  
 }
 .overlay5{
- position: fixed;  /* changed */
+ position: fixed; 
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(0,0,0,0.7);
   display: flex;
@@ -66,6 +67,7 @@
   display: flex;
    margin-bottom: 25px;
 }
+
 .cross{
   position:absolute;
 top: 0;
@@ -75,7 +77,10 @@ margin-top: 200px;
 color: rgb(252, 252, 252);
 
 }
-
+.frame{
+   width:860px;
+      height:450px;
+}
 .CirclePlay:hover{
     transform: scale(1);
     animation: popUpDown 0.5s ease-in-out infinite;
@@ -90,6 +95,27 @@ color: rgb(252, 252, 252);
   100% {
     transform: translateY(1) scale(0.9);
   }
+  
+}
+
+
+
+
+/* responsive for mobile */
+@media screen and (max-width: 480px) {
+.frame{
+   width:400px;
+      height:250px;
+}
+.cross{
+  position:absolute;
+top: 0;
+display: flex;
+margin-left: 360px;
+margin-top: 280px;
+color: rgb(252, 252, 252);
+
+}
 }
 
 

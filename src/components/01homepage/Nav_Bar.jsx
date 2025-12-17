@@ -4,18 +4,20 @@
   import style from '../../styles/Nav_Bar.module.css'
   import Loading from '../loadingpage/loading'
   import { useNavigate } from "react-router-dom";
+import { Menu } from 'lucide-react'
 
   const Nav_Bar = () => {
       const navigate = useNavigate();
     const [scroll, setScroll] = useState(false);
     const [loading,setLoading]= useState(false)
+    const [menu, setMenu]=useState(false)
      const handleNavigation = (path) => {
     setLoading(true);
 
     setTimeout(() => {
       navigate(path);
       setLoading(false);
-    }, 1000); // loader duration (adjust)
+    }, 1000); 
   };
 
     useEffect(() => {
@@ -27,6 +29,10 @@
       window.addEventListener("scroll", onScroll);
       return () => window.removeEventListener("scroll", onScroll);
     }, []);
+    
+    const menuhandler=()=>{
+       setMenu(prev => !prev);
+    }
     
     return (<>
       <nav className={`${style.nav_container} ${scroll ? style.nav_scroll : ""}`}>
@@ -41,15 +47,29 @@
   <li className={style.li} onClick={() => handleNavigation("/services")}>Services</li>
   <li className={style.li} onClick={() => handleNavigation("/gallery")}>Gallery</li>
   <li className={style.li} onClick={() => handleNavigation("/contact")}>Contact</li>
-</ul>
+</ul> 
+ <Menu className={style.menu} onClick={menuhandler} size={35} color='white'/> 
+     
 
         
         <button  className={style.book_btn}><Link to={'/book'} className={style.linkbook}>Book Now</Link></button>
         </div>
-      </nav>
-      {loading && <div className={style.time_conatainer}>
         
-        <Loading className={style.loading}/> </div>}
+        
+      </nav>
+      
+      {loading && <div className={style.time_conatainer}> <Loading className={style.loading}/> </div>}
+        
+     <div className={`${style.mobile_menu} ${scroll ? style.mobile_scroll : ""} ${menu ? style.active : ""}`}>
+  <ul className={style.nav_mobile}>
+    <Link to="/" onClick={() => setMenu(false)}>Home</Link>
+    <li onClick={() =>  handleNavigation("/about")}>About</li>
+    <li onClick={() => handleNavigation("/rooms")}>Rooms</li>
+    <li onClick={() => handleNavigation("/services")}>Services</li>
+    <li onClick={() => handleNavigation("/gallery")}>Gallery</li>
+    <li onClick={() => handleNavigation("/contact")}>Contact</li>
+  </ul>
+</div>
       
       </>
     )

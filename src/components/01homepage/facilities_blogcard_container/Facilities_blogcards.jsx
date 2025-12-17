@@ -12,7 +12,6 @@ const Facilities_blogcards = () => {
         <h2>Facilities</h2>
         <div className={style.horizontal_line}></div>
     <div className={style.Facilities_blogcards}>
-        
         <Blogcards img1={img1} h3="Barbecue" p="Enjoy tasty grilled food at our resort's barbecue. It's a great way to dine outdoors."/>
         <Blogcards img1={img2} h3="Power Backups" p="Enjoy uninterrupted comfort with reliable power backup facilities, even during outages."/>
         <Blogcards img1={img3} h3="Free Parking" p="parking is complimentary , giving you peace of mind during your stay."/>

@@ -13,6 +13,7 @@ const top = () => {
          <p>+977 9852020058</p>
         </div>
         
+        {/* <div className={style.mailandicons_mbl_view}> */}
         <div className={style.emailContainer} >
           <Mail color='white' size={20}/>
           <p>booking@sudarshanagroresort.com.np</p>
@@ -23,6 +24,7 @@ const top = () => {
         <Instagram color='white' size={20} cursor="Pointer"/>
         <Linkedin color='white' size={20} cursor="Pointer"/>
       </div>
+      {/* </div> */}
      
      
     </div>

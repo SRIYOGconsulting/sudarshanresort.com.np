@@ -15,9 +15,10 @@ const container2 = () => {
           </div>
         </div>
           
-          
+          <div className={style.btn_and_text_container}>
           <p className={style.para}>Welcome to Sudarshan Park and Resort! Here, peacefulness mixes with Nepali customs. Situated in lush greenery, our haven calls you to relax and enjoy Nepal's essence. Immerse yourself in our lively culture, enjoying real food and fun activities. With cozy rooms and fair prices, we promise your stay will be unforgettable. Come, relax, and immerse yourself in the beauty of Nepal, right here with us. Welcome to a unique getaway!</p>
           <Link to="/about" className={style.about_btn}>About</Link>
+          </div>
         </div>
        
         

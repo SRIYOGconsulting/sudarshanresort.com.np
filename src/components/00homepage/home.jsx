@@ -2,7 +2,7 @@ import React from 'react'
 import Top  from '../01homepage/top.jsx'
 import NavBar from '../../components/01homepage/Nav_Bar.jsx'
 import SudarshanHome from '../../components/01homepage/sudarshan_main.jsx'
-import ContentOverImg from '../../components/01homepage/Content_Over_Img.jsx'
+// import ContentOverImg from '../../components/01homepage/Content_Over_Img.jsx'
 import Container2 from '../../components/01homepage/container2.jsx'
 import Our_Accomodation from '../../components/01homepage/Our_Accomodation.jsx'
 import Facilities_blogcards from '../../components/01homepage/facilities_blogcard_container/Facilities_blogcards.jsx'
@@ -28,7 +28,7 @@ const Home = () => {
        <Top />
       <NavBar />
       <SudarshanHome />
-      <ContentOverImg />
+      {/* <ContentOverImg /> */}
       <Container2/>
       <Our_Accomodation/>
       <Facilities_blogcards/>

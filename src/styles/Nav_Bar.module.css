@@ -19,7 +19,7 @@
   
 }
 .nav_scroll{
-  background: #787878;   /* dark transparent */
+  background: #787878;  
 
   transition: all 0.3s ease-in-out;
 }
@@ -49,6 +49,7 @@
     gap: 20px;
     align-items: center;
     margin-right: 100px;
+    /* margin-left: auto; */
 }
 
 
@@ -92,12 +93,177 @@
   color: white;
 }
 
-
-
-
-
 .time_conatainer{
  position: fixed;
   inset: 0;
   z-index: 99999;
 }
+
+
+
+
+/* mobile view */
+.menu{
+  visibility: hidden;
+}
+
+
+
+.mobile_menu {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: fixed;   
+  top: 150px;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  z-index: 999;
+  
+  
+    max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-20px);
+}
+
+.mobile_menu ul {
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  width: 80%;
+  list-style: none;
+  margin: 0;
+  
+}
+
+.mobile_menu li,
+.mobile_menu a {
+ padding-top: 5px;
+ padding-bottom: 5px;
+  color: white;
+ padding-left: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-top: 1px solid rgb(131, 131, 151);
+
+  
+}
+
+
+.mobile_menu.active {
+  max-height: 500px;  /* adjust according to content */
+  opacity: 1;
+  transform: translateY(0);  /* slide into place */
+  
+}
+
+
+
+/* mobile responsive */
+@media screen and (max-width: 480px) {
+
+  .nav_container {
+    position: sticky;
+    /* position: relative; */
+    /* padding: 0 20px;
+    height: 80px; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav_logo img {
+    height: 90px;
+    width: 90px;
+    margin-left: 0;
+  }
+
+  /* Hide menu links */
+  .nav_menu {
+    display: none;
+  }
+
+  /* Hide Book Now button */
+  .book_btn {
+    display: none;
+  }
+
+  /* Show menu icon */
+  .menu {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  .nav_button_both_container {
+    margin-right: 0;
+  }
+  
+  
+  
+  /* mobile view */
+  .mobile_menu {
+  display: flex;
+  /* position: absolute; */
+  position: fixed;   
+  top: 220px;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  z-index: 999;
+  padding-bottom: 25px;
+   position: sticky;   
+  top: 110px;
+  
+   
+    /* transition: max-height 0.5s ease, opacity 0.5s ease; */
+}
+.nav_mobile{
+  background-color: rgb(66, 56, 56);
+  border: 1px solid rgb(211, 204, 204);
+  
+}
+.mobile_menu li,
+.mobile_menu a {
+  text-decoration: none;
+  cursor: pointer;
+    height: fit-content;
+  
+}
+.mobile_menu li:hover,
+.mobile_menu a:hover {
+  background-color: rgb(226, 98, 12);
+  border: none;
+
+  
+}
+.nav_mobile{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+
+}
+
+.mobile_scroll {
+  background: #787878; /* same as navbar when scrolled */
+  transition: background 0.3s ease-in-out;
+}
+
+.mobile_scroll li,
+.mobile_scroll a {
+  color: white; /* keep text readable */
+}
+
+.mobile_scroll li:hover,
+.mobile_scroll a:hover {
+  background-color: #4d9221; /* optional: hover effect when scrolled */
+}
+
+
+
