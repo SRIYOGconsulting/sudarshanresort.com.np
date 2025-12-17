@@ -1,29 +1,37 @@
-
-.about_container{
-   background: #191919 url(../../assets/about_images/aboutus_Hero/1.jpg) center center no-repeat;
+.Aboutcontainer{
+    position: relative;
+       background: #191919 url(../../assets/about_images/aboutus_Hero/1.jpg) center center no-repeat;
     background-size: cover;
-    padding: 99px 0;
+    /* padding: 99px 0; */
+   
+    height: 32vh;
 }
-.header{
-    margin-left:20%;
+.about_container{
+position: absolute;
+  top: 100px;
+  left: 18%;
+  
 }
+
 .about_container h1{
     color:white;
     font-size:50px;
     font-weight:600;
+     
 }
 
 
 .tab_container{
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap:10px;
   color:white;
   font-size:20px;
-  margin-top:20px;
+
 }
 .tab_container p{
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    color: rgb(44, 42, 42);
 }
 .navigation_link{
     text-decoration:none;
@@ -31,4 +39,12 @@
 }
 .navigation_link:hover{
     color: green;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 480px) {
+ 
+.header{
+  
+}
 }

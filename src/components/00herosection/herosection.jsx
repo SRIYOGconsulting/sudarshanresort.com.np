@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import  style from './herosection.module.css'
 
-const herosection = (props) => {
+const Herosection = (props) => {
   return (
     <div className={style.Aboutcontainer}>
       <div className={style.about_container}>
@@ -22,5 +22,5 @@ const herosection = (props) => {
   )
 }
 
-export default herosection
+export default Herosection
   

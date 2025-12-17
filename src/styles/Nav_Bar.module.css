@@ -206,15 +206,13 @@
   /* mobile view */
   .mobile_menu {
   display: flex;
-  /* position: absolute; */
   position: fixed;   
-  top: 220px;
   left: 0;
   width: 100%;
+  height: 350px;
   background: #1a1a1a;
   z-index: 999;
-  padding-bottom: 25px;
-   position: sticky;   
+  position: sticky;   
   top: 110px;
   
    
