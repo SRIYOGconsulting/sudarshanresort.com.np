@@ -1,24 +1,16 @@
 import { useState } from 'react';
 
-// import React from 'react'
-import img1 from '../../assets/gallery_images/doublebed/doublebed1.jpg'
-import img2 from '../../assets/gallery_images/doublebed/doublebed2.jpg'
-import img3 from '../../assets/gallery_images/doublebed/doublebed3.jpg'
-import img4 from '../../assets/gallery_images/doublebed/doublebed4.jpg'
-import img5 from '../../assets/gallery_images/doublebed/doublebed5.jpg'
-import img6 from '../../assets/gallery_images/doublebed/doublebed6.jpg'
-
 import style from './double_cards.module.css'
 import { SquareArrowOutUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Doublebed_cards = () => {
     const images = [
-      {id:1, img:img1, size:"card1"},
-      {id:2, img:img2, size:"card2"},
-      {id:3, img:img3, size:"card3"},
-      {id:4, img:img4, size:"card4"},
-      {id:5, img:img5, size:"card5"},
-      {id:6, img:img6, size:"card6"}
+      {id:1, img:"images/gallery/double_bed/doublebed1.jpg", size:"card1"},
+      {id:2, img:"images/gallery/double_bed/doublebed2.jpg", size:"card2"},
+      {id:3, img:"images/gallery/double_bed/doublebed3.jpg", size:"card3"},
+      {id:4, img:"images/gallery/double_bed/doublebed4.jpg", size:"card4"},
+      {id:5, img:"images/gallery/double_bed/doublebed5.jpg", size:"card5"},
+      {id:6, img:"images/gallery/double_bed/doublebed6.jpg", size:"card6"}
       ];
      const [currentIndex, setCurrentIndex] = useState(null);
     

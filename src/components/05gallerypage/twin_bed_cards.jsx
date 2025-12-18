@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
-import img1 from '../../assets/gallery_images/twinbed/twinbed1.jpg';
-import img2 from '../../assets/gallery_images/twinbed/twinbed2.jpg';
-import img3 from '../../assets/gallery_images/twinbed/twinbed3.jpg';
-import img4 from '../../assets/gallery_images/twinbed/twinbed4.jpg';
-import img5 from '../../assets/gallery_images/twinbed/twinbed5.jpg';
-import img6 from '../../assets/gallery_images/twinbed/twinbed6.jpg';
-import img7 from '../../assets/gallery_images/twinbed/twinbed7.jpg';
-import img8 from '../../assets/gallery_images/twinbed/twinbed8.jpg';
-import style from './twin_bed_cards.module.css';
-import { SquareArrowOutUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from "react";
+// import img1 from '../../assets/gallery_images/twinbed/twinbed1.jpg';
+// import img2 from '../../assets/gallery_images/twinbed/twinbed2.jpg';
+// import img3 from '../../assets/gallery_images/twinbed/twinbed3.jpg';
+// import img4 from '../../assets/gallery_images/twinbed/twinbed4.jpg';
+// import img5 from '../../assets/gallery_images/twinbed/twinbed5.jpg';
+// import img6 from '../../assets/gallery_images/twinbed/twinbed6.jpg';
+// import img7 from '../../assets/gallery_images/twinbed/twinbed7.jpg';
+// import img8 from '../../assets/gallery_images/twinbed/twinbed8.jpg';
+import style from "./twin_bed_cards.module.css";
+import {
+  SquareArrowOutUpRight,
+  X,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const TwinBedCards = () => {
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const images = [
+    { img: "images/gallery/twin_bed/twinbed1.jpg" },
+    { img: "images/gallery/twin_bed/twinbed2.jpg" },
+    { img: "images/gallery/twin_bed/twinbed3.jpg" },
+    { img: "images/gallery/twin_bed/twinbed4.jpg" },
+    { img: "images/gallery/twin_bed/twinbed5.jpg" },
+    { img: "images/gallery/twin_bed/twinbed6.jpg" },
+    { img: "images/gallery/twin_bed/twinbed7.jpg" },
+    { img: "images/gallery/twin_bed/twinbed8.jpg" },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -36,7 +50,7 @@ const TwinBedCards = () => {
       <div className={style.container}>
         {images.map((img, index) => (
           <div className={style.imgcontainer} key={index}>
-            <img src={img} alt="img" />
+            <img src={img.img} alt="img" />
             <div className={style.overlay}>
               <SquareArrowOutUpRight
                 className={style.bookbtn}
@@ -50,29 +64,37 @@ const TwinBedCards = () => {
 
       {currentIndex !== null && images[currentIndex] && (
         <div className={style.fullscreenOverlay}>
-          <X className={style.closeBtn} color="white" size={30}   onClick={(e) => {
-    e.stopPropagation();
-    closeFullscreen();
-  }} />
+          <X
+            className={style.closeBtn}
+            color="white"
+            size={30}
+            onClick={(e) => {
+              e.stopPropagation();
+              closeFullscreen();
+            }}
+          />
           <ChevronLeft
             className={`${style.navBtn} ${style.leftNav}`}
             color="white"
             size={40}
-             onClick={(e) => {
-    e.stopPropagation(); // prevent bubbling
-    prevImage();
-  }}
+            onClick={(e) => {
+              e.stopPropagation(); // prevent bubbling
+              prevImage();
+            }}
           />
-          <img src={images[currentIndex]} alt="fullscreen" className={style.fullscreenImg} />
+          <img
+            src={images[currentIndex]}
+            alt="fullscreen"
+            className={style.fullscreenImg}
+          />
           <ChevronRight
             className={`${style.navBtn} ${style.rightNav}`}
             color="white"
             size={40}
-            
-           onClick={(e) => {
-    e.stopPropagation(); // prevent bubbling
-    nextImage();
-  }}
+            onClick={(e) => {
+              e.stopPropagation(); // prevent bubbling
+              nextImage();
+            }}
           />
         </div>
       )}

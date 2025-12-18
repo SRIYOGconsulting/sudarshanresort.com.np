@@ -11,7 +11,7 @@ import Testimonials from '../../components/01homepage/Testimonials/Testimonials.
 import Footer from '../../components/01homepage/Footer.jsx'
 import Whatsapp_logo from '../../components/01homepage/whatsapp_logo.jsx'
 
-import enjoyagro from '../../assets/enjoy_agro.jpg'
+// import enjoyagro from '../../assets/enjoy_agro.jpg'
 
 
 
@@ -32,7 +32,7 @@ const Home = () => {
       <Container2/>
       <Our_Accomodation/>
       <Facilities_blogcards/>
-      <EnjoyAgro bg={enjoyagro}/>
+      <EnjoyAgro bg="images/home/transparentbg/1.jpg"/>
       <Testimonials/>
       <Footer />
       <Whatsapp_logo />

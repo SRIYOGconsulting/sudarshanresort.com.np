@@ -1,10 +1,11 @@
-import React from 'react'
+
 import Top from '../01homepage/top.jsx'
 import Navbar from '../01homepage/Nav_Bar.jsx'
 import Herosection from '../00herosection/herosection.jsx'
 import Allcards from '../05gallerypage/allcards.jsx'
 import Footer from '../01homepage/Footer.jsx'
  import { useEffect } from "react";
+ 
 const Gallery = () => {
      useEffect(() => {
       document.title = "Gallery | Sudarshan Resort";

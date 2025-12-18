@@ -1,5 +1,6 @@
 import style from './allcards.module.css'
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import All from './cardcontainer.jsx'
 import Twin_bed from './twin_bed_cards.jsx'
 import Doublebed_cards from './doublebed_cards';

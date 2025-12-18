@@ -1,13 +1,11 @@
-import React from "react";
+
 import style from "./roomblogcards.module.css";
-import img1 from "../../assets/rooms_images/room1.jpg";
-import img2 from '../../assets/rooms_images/room2.jpg'
-import Book from '../book_Now/book_now.jsx'
 import { Link } from "react-router-dom";
-const roomblogcards = () => {
+
+const Roomblogcards = () => {
   const roomcontent=[
-    {img:img1,title:"Twin Bed",price:"2500", per:"/per night" },
-    {img:img2,title:"Twin Bed",price:"2500", per:"/per night" },
+    {img:"images/rooms/room1.jpg",title:"Twin Bed",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.jpg",title:"Twin Bed",price:"2500", per:"/ per night" },
   ]
   return (
 
@@ -36,4 +34,4 @@ const roomblogcards = () => {
   );
 };
 
-export default roomblogcards;
+export default Roomblogcards;

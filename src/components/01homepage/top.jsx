@@ -3,7 +3,7 @@ import { Mail, PhoneCall,Facebook,Instagram,Linkedin } from 'lucide-react'
 import style  from '../../styles/top.module.css'
 // import NavBar from './Nav_Bar'
 
-const top = () => {
+const Top = () => {
   return (
     
     <div className={style.Container}>
@@ -31,4 +31,4 @@ const top = () => {
   )
 }
 
-export default top
+export default Top

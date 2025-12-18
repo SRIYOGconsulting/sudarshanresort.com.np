@@ -1,17 +1,12 @@
-import React from 'react'
+
 import style from './about_feature_blog.module.css'
-import featureimg from '../../assets/about_images/feature/1.jpg'
-import wifi from '../../assets/about_images/feature/wifi.png'
-import car from '../../assets/about_images/feature/car.png'
-import utensils from '../../assets/about_images/feature/utensils.png'
-// import React from 'react'
 import { Check } from 'lucide-react'
 const about_feature_blog = () => {
   return (
    <div className={style.feature_container}>
         
-        <div>
-        <img src={featureimg} alt="" />
+        <div className={style.image_main_container}>
+        <img src="images/about/feature/1.jpg" alt="" />
         </div>
         
         <div className={style.feature_content}>
@@ -22,7 +17,7 @@ const about_feature_blog = () => {
           
         <div className={style.feature_content_container}>
           <div className={style.list_container}>
-            <ul>
+            <ul className={style.list_container_check}>
               <div>
               <li>
               <Check color="#00ff33" strokeWidth={3} />
@@ -60,17 +55,17 @@ const about_feature_blog = () => {
             <div className={style.line2}></div>
           <div className={style.feature_container_footer}>
             <div className={style.FooterIconContainer}>
-                <img src={wifi} alt="wifi" />
+                <img src="images/about/feature/wifi.png" alt="wifi" />
                 <h3>Free WiFi Access</h3>
                 <div className={style.line3}></div>
             </div>
             <div className={style.FooterIconContainer}>
-                <img src={utensils} alt="utensils" />
+                <img src="images/about/feature/utensils.png" alt="utensils" />
                 <h3>Restaurant & Food Service</h3>
                 <div className={style.line3}></div>
             </div>
             <div className={style.FooterIconContainer}>
-                <img src={car} alt="car" />
+                <img src="images/about/feature/car.png" alt="car" />
                 <h3>Free Parking</h3>
             </div>
           </div>

@@ -52,4 +52,25 @@
     .cards_row > div {
         flex: 0 0 100%; /* 1 per row on mobile */
     }
+    
+}
+
+@media screen and (max-width: 480px) {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(202, 200, 200);
+    padding: 80px 0;
+}
+.cards_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 30px;
+    margin-top: 20px;
+    width: 90%;
+}
 }

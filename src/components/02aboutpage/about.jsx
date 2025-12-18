@@ -1,11 +1,8 @@
 
 
 
-import img1 from '../../assets/about_images/aboutus/aboutus.jpg'
-import img2 from  '../../assets/about_images/promoting/1.jpg'
-import img3 from '../../assets/about_images/promoting/2.jpg'
-import img4 from '../../assets/about_images/promoting/3.jpg'
-import enjoy from '../../assets/about_images/enjoyagroresort/1.jpg'
+
+// import enjoy from '../../assets/about_images/enjoyagroresort/1.jpg'
 
 import style from './about.module.css'
 
@@ -19,9 +16,9 @@ import Nav_Bar from '../01homepage/Nav_Bar'
  import { useEffect } from "react";
 const About = () => {
   const promoting=[
-    {img:img2},
-    {img:img3},
-    {img:img4},
+    {img:"images/about/promoting/1.jpg"},
+    {img:"images/about/promoting/2.jpg"},
+    {img:"images/about/promoting/3.jpg"},
   ]
  
  useEffect(() => {
@@ -42,7 +39,7 @@ const About = () => {
             <p className={style.content_p}>
             At Sudarshan Park and Resort, we take pride in serving the finest traditional Nepali dishes at affordable prices.</p>
             </div>
-          <img src={img1} className={style.img1} alt="aboutimg" />
+          <img src="images/about/SudarshanAbout.jpg" className={style.img1} alt="aboutimg" />
         </div>
       </div>
       
@@ -51,7 +48,7 @@ const About = () => {
         <h1>"Promoting Tourism"</h1>
         <div className={style.image_container}>
         {promoting.map((promote,index)=>(
-          <img key={index} src={promote.img} alt="" />
+          <img className={style.img_promote} key={index} src={promote.img} alt="" />
         ))}
         </div>
         
@@ -59,7 +56,7 @@ const About = () => {
       {/* Feature blog of about page */}
      <About_feature_blog/>
      <Testimonial/>
-     <EnjoyAgro bg={enjoy} />
+     <EnjoyAgro bg="images/about/transparentbg/1.jpg" />
      <Footer/>
     </div>
   )

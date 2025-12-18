@@ -1,10 +1,9 @@
-  import React, { useState, useEffect } from 'react'
+  import { useState, useEffect } from 'react'
   import { Link } from 'react-router-dom'
-  import logo from '../../assets/logo.png'
   import style from '../../styles/Nav_Bar.module.css'
   import Loading from '../loadingpage/loading'
   import { useNavigate } from "react-router-dom";
-import { Menu } from 'lucide-react'
+  import { Menu } from 'lucide-react'
 
   const Nav_Bar = () => {
       const navigate = useNavigate();
@@ -13,11 +12,11 @@ import { Menu } from 'lucide-react'
     const [menu, setMenu]=useState(false)
      const handleNavigation = (path) => {
     setLoading(true);
-
     setTimeout(() => {
       navigate(path);
       setLoading(false);
-    }, 1000); 
+    }, 1000);
+    
   };
 
     useEffect(() => {
@@ -37,7 +36,7 @@ import { Menu } from 'lucide-react'
     return (<>
       <nav className={`${style.nav_container} ${scroll ? style.nav_scroll : ""}`}>
         <div className={style.nav_logo}>
-          <img src={logo} alt="logo" />
+          <img src="favicon/logo.png" alt="logo" />
         </div>
       <div className={style.nav_button_both_container}>
         <ul className={style.nav_menu}>
@@ -48,10 +47,7 @@ import { Menu } from 'lucide-react'
   <li className={style.li} onClick={() => handleNavigation("/gallery")}>Gallery</li>
   <li className={style.li} onClick={() => handleNavigation("/contact")}>Contact</li>
 </ul> 
- <Menu className={style.menu} onClick={menuhandler} size={35} color='white'/> 
-     
-
-        
+ <Menu className={style.menu} onClick={menuhandler} size={35} color='white'/>
         <button  className={style.book_btn}><Link to={'/book'} className={style.linkbook}>Book Now</Link></button>
         </div>
         

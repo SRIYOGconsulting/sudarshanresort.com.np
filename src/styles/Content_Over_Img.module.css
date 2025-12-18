@@ -70,6 +70,8 @@
 .typing_text {
   font-style: italic;
   font-family: "Lora";
+  background-color: black;
+  width: fit-content;
 }
 
 .book_now_btn {
@@ -90,7 +92,9 @@
 
 @media screen and (max-width: 480px) {
   .topcontainer {
-    position: fixed;
+    /* position: fixed; */
+   
+   
   }
   .comfort {
     font-size: 26px;
@@ -106,16 +110,26 @@
   .h1_Link_btn_wrapper {
     display: flex;
     align-items: flex-start;
+    width: fit-content;
   }
 
   .typing_container {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    flex-wrap: nowrap;
+    /* top: 250px; */
+    left: 0;
+    width: fit-content;
     font-size: 26px;
   }
   .topcontainer {
     position: absolute;
     top: 30%;
-    left: 10%;
+    left: 0;
     margin-left: 0;
+    
+    width: 100%;
   }
   .top {
     top: 70px;
@@ -123,5 +137,15 @@
 
   .typing_container {
     width: 100%;
+    /* background-color: yellow; */
   }
+  .book_now_btn {
+    position: absolute;
+    margin-top: 0;
+    top: 205px;
+    margin-right: 0px;
+  
+ 
+  
+}
 }

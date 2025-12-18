@@ -46,11 +46,11 @@
  .starting_img {
   display: flex;
   justify-content: space-around;
-       height: 350px !important;
-    width: 350px !important;
+       height: 250px !important;
+    width: 250px !important;
   }
   .X{
-    top: 250px;
-    margin-left: 80%;
+    top: 240px;
+    margin-left: 65%;
   }
 }

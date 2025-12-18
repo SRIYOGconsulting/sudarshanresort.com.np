@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  
+  
   padding: 100px 0;
   background-color: #f3f3f3;
 }
@@ -30,20 +32,16 @@
 .imageWrapper:hover .overlay {
   opacity: 1;
 }
-
-.bookbtn {
-  padding: 10px 24px;
-  border: none;
-  background: #333;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  border-radius: 4px;
+.roomcard{
+  background-color: white;
 }
-
 .roomcard_content {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  padding: 25px ;
+  /* justify-content: center; */
+  /* background-color: white;  */
+ 
 }
 
 .price_container {
@@ -51,7 +49,9 @@
   align-items: center;
   gap: 10px;
 }
-
+.price_container p{
+  margin: 0;
+}
 /* animations on image hover */
 .imageWrapper {
   position: relative;
@@ -86,16 +86,22 @@
 }
 
 .bookbtn {
-  background: #fff;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
-
+  /* border-radius: 5px; */
+  color: white;
+  background-color: green;
+  text-decoration: none;
   transform: translateY(100px);
   transition: 0.4s ease;
   opacity: 0;
+  font-weight: 200;
+}
+.bookbtn:hover{
+  background-color: white;
+  color: green;
 }
 
 .imageWrapper:hover .bookbtn {

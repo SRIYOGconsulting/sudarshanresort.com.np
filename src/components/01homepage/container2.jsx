@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../../styles/container2.module.css'
-import Sudarshanabout from '../../assets/SudarshanAbout.jpg'
+// import Sudarshanabout from '../../assets/SudarshanAbout.jpg'
 import { Link } from 'react-router-dom'
 const container2 = () => {
   return (
@@ -23,7 +23,7 @@ const container2 = () => {
        
         
         <div className={style.image_container}>
-          <img className={style.sudarshanabout} src={Sudarshanabout} alt="sudarshanabout" />
+          <img className={style.sudarshanabout} src="images/home/SudarshanAbout.jpg" alt="sudarshanabout" />
         </div>
       
     </div>
