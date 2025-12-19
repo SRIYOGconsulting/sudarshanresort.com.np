@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../styles/Our_Accomodation.module.css'
+import style from './Our_Accomodation.module.css'
 // import room1 from '../../assets/room1.jpg'
 // import room2 from '../../assets/room2.jpg'
 import { Link} from 'react-router-dom'

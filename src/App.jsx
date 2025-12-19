@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Starting_Page from './components/01homepage/Starting_Page.jsx'
 
-import Home from './components/00homepage/home.jsx' 
+import Home from './components/home/home.jsx' 
 import About from './components/02aboutpage/about.jsx'
 import Room from './components/03roomspage/room.jsx'
 import Services from './components/04servicespage/services.jsx'

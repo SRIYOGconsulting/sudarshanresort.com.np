@@ -1,8 +1,7 @@
-import React from 'react'
-import style from '../../styles/container2.module.css'
-// import Sudarshanabout from '../../assets/SudarshanAbout.jpg'
+
+import style from './homeAbout.module.css'
 import { Link } from 'react-router-dom'
-const container2 = () => {
+const About= () => {
   return (
     <div className={style.container}>
         <div className={style.content}>
@@ -30,4 +29,4 @@ const container2 = () => {
   )
 }
 
-export default container2
+export default About

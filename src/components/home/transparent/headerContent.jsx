@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from "../../styles/Content_Over_Img.module.css";
+import style from "./headerContent.module.css";
 import { Link } from "react-router-dom";
 const Content_Over_Img = () => {
   
