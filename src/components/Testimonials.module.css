@@ -1,0 +1,153 @@
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(202, 200, 200);
+    padding: 100px 20px;
+}
+
+.container h3 {
+    color: #232323;
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.horizontal_line {
+    background: #008000;
+    width: 50px;
+    height: 2px;
+    margin: 10px auto 0;
+}
+
+/* Cards row - 3 cards per row */
+.cards_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 30px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+
+/* Each card width */
+.cards_row > div {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    /* margin-bottom: 30px; */
+}
+
+
+
+/* cards css */
+
+.containerCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    padding-left: 35px;
+    padding-bottom: 65px;
+    padding-top: 15px;
+    padding-right: 35px;
+    margin-top: 80px;
+}
+.containerCard img{
+    width: 250px;
+
+}
+.containerCard h2{
+    font-family: 'Poppins';
+    color: #535353;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+    
+}
+.containerCard span{
+    color: #9F9F9F;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    
+    
+}
+.Rating_icon{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerCard p{
+    text-align: center;
+    color: #787878;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+
+
+.containerCard p.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 5 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.containerCard p.description.expanded {
+    -webkit-line-clamp: unset; /* Show full text */
+}
+
+.seeMoreBtn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #008000;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .cards_row > div {
+        flex: 0 0 calc(50% - 20px); /* 2 per row on tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards_row > div {
+        flex: 0 0 100%; /* 1 per row on mobile */
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(202, 200, 200);
+    padding: 80px 0;
+}
+.cards_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 30px;
+    margin-top: 20px;
+    width: 90%;
+}
+}

@@ -1,24 +1,24 @@
 
-import Top  from '../01homepage/top.jsx'
-import NavBar from '../01homepage/Nav_Bar.jsx'
-import SudarshanHome from './transparent/headerImg.jsx'
+import Top  from '../top.jsx'
+import NavBar from '../Nav_Bar.jsx'
+import HeaderImg from './transparent/headerContent.jsx'
 import HomeAbout from './about/homeAbout.jsx'
-import Our_Accomodation from './ourAccomodation/Our_Accomodation.jsx'
+import Our_Accomodation from './ourAccomodation/ourAccomodation.jsx'
 import Facilities_blogcards from './facilities/facilitiesBlogcards.jsx'
-import EnjoyAgro from '../01homepage/EnjoyAgro.jsx'
-import Testimonials from '../01homepage/Testimonials/Testimonials.jsx'
-import Footer from '../01homepage/Footer.jsx'
-import Whatsapp_logo from '../01homepage/whatsapp_logo.jsx'
+import EnjoyAgro from '../EnjoyAgro.jsx'
+import Testimonials from '../Testimonials.jsx'
+import Footer from '../Footer.jsx'
+import Whatsapp_logo from '../whatsapp_logo.jsx'
 
 
-
+import style from './Home.module.css'
 
 const Home = () => {
   return (
-    <div>
+    <div className={style.homecontainer}>
       <Top />
       <NavBar />
-      <SudarshanHome />
+      <HeaderImg />
       <HomeAbout/>
       <Our_Accomodation/>
       <Facilities_blogcards/>

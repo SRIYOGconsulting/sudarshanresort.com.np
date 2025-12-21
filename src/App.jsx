@@ -1,17 +1,15 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import Starting_Page from './components/01homepage/Starting_Page.jsx'
-
+import Starting_Page from './components/Starting_Page.jsx'
 import Home from './components/home/home.jsx' 
-import About from './components/02aboutpage/about.jsx'
-import Room from './components/03roomspage/room.jsx'
-import Services from './components/04servicespage/services.jsx'
-import Gallery from './components/05gallerypage/gallery.jsx'
-import Contact from './components/06contactpage/contact.jsx'
-import ScrollToTop from "./components/01homepage/scrolltop.jsx";
-import Book_Now from './components/book_Now/book_now.jsx'
-
+import About from './components/about/about.jsx'
+import Room from './components/rooms/room.jsx'
+import Services from './components/services/services.jsx'
+import Gallery from './components/gallery/gallery.jsx'
+import Contact from './components/contact/contact.jsx'
+import ScrollToTop from "./components/scrolltop.jsx";
+import Book_Now from './components/bookNow/book_now.jsx'
 
 const App = () => {
   return (

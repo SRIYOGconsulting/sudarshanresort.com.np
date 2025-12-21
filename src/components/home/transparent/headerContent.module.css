@@ -1,34 +1,92 @@
-.container {
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 25%;
-
-  /* margin-left:25%;  */
+.sudarshan_main_container {
+  position: relative;
+  width: 100%;
+   
 }
-.top {
+
+/* Image wrapper */
+.sudarshan_img_container {
+  position: relative; /* Required for overlay content */
+  width: 100%;
+  /* display: flex;
+  flex-direction: column;
+   */
+}
+
+/* Hero Image */
+.sudarshan_img_container img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+ 
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  .sudarshan_img_container img {
+    height: 65vh;
+  }
+}
+
+
+
+
+
+.topcontainer {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: absolute;
-  top: 50px;
-  left: 0;
+  top: 45%;
+  left: 20%;
+}
+
+/* Small heading */
+.top {
+
   color: #ffffff;
   font-family: "Lora";
   font-style: italic;
   font-size: 19px;
 }
 
+/* Typing wrapper */
+
+
+/* Typing row */
 .typing_container {
   font-size: 55px;
   font-family: "Playfair Display";
   font-weight: 700;
-  color: rgb(8, 4, 4);
   display: flex;
   align-items: center;
-  height: 60px;
-  width: 100vh;
+  /* background-color: red; */
   color: white;
 }
 
+/* Comfort text */
+.comfort {
+  font-size: 55px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+/* Typing animated text */
+.typing_text {
+  font-style: italic;
+  font-family: "Lora";
+  width: fit-content;
+}
+
+/* Cursor */
 .cursor {
   font-weight: bold;
   margin-left: 3px;
@@ -41,111 +99,65 @@
   opacity: 0;
 }
 
-.comfort {
-  font-size: 55px;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  margin-right: 25px;
-}
+/* Bottom heading + button */
 .h1_Link_btn_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+ 
 }
+
 .for_your_vacation {
   font-size: 55px;
   font-weight: 700;
-  margin-top: 40%;
   font-family: "Poppins";
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
-.topcontainer {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-}
-
-.typing_text {
-  font-style: italic;
-  font-family: "Lora";
-  background-color: black;
-  width: fit-content;
-}
-
+/* Button */
 .book_now_btn {
-  margin-top: 20px;
-  margin-right: 300px;
-  padding: 10px 20px;
+  margin-top: 40px;
+  padding: 14px 33px;
   font-size: 18px;
   background-color: #4d9221;
   color: white;
   text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
 }
+
 .book_now_btn:hover {
   background-color: #353535;
 }
 
+/* 📱 MOBILE VIEW */
 @media screen and (max-width: 480px) {
+  
   .topcontainer {
-    /* position: fixed; */
-   
-   
+    top: 30%;
+    left: 20px;
+    width: fit-content;
+
   }
+
+  .typing_container {
+    font-size: 26px;
+    width: fit-content;
+    flex-wrap: nowrap;
+  }
+
   .comfort {
     font-size: 26px;
-    margin-right: 10px;
+  
   }
+
   .for_your_vacation {
     font-size: 24px;
-    font-weight: 700;
-    margin-top: 35%;
-    font-family: "Poppins";
-    color: rgb(255, 255, 255);
-  }
-  .h1_Link_btn_wrapper {
-    display: flex;
-    align-items: flex-start;
-    width: fit-content;
-  }
-
-  .typing_container {
-    display: flex;
-    justify-content: center;
-    background-color: red;
-    flex-wrap: nowrap;
-    /* top: 250px; */
-    left: 0;
-    width: fit-content;
-    font-size: 26px;
-  }
-  .topcontainer {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    margin-left: 0;
     
-    width: 100%;
-  }
-  .top {
-    top: 70px;
   }
 
-  .typing_container {
-    width: 100%;
-    /* background-color: yellow; */
-  }
-  .book_now_btn {
-    position: absolute;
-    margin-top: 0;
-    top: 205px;
-    margin-right: 0px;
-  
- 
-  
+
+
+
 }
-}
+

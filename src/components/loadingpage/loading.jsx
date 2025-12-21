@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import style from './loading.module.css'
 import { useNavigate } from 'react-router-dom';
 const Loading = () => {
@@ -8,7 +8,7 @@ const Loading = () => {
         navigate("/home");  
       }, 3000);
   
-      return () => clearTimeout(timer); // cleanup
+      return () => clearTimeout(timer); 
     }, [navigate]);
     
   return (

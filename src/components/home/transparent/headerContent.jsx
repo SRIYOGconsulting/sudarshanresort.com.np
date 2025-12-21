@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import style from "./headerContent.module.css";
 import { Link } from "react-router-dom";
+
 const Content_Over_Img = () => {
   
   const texts = [
-    "Luxury Hotel & Resort",
-    "Redefined",
-    "Experience Calmness",
+    "Luxury Resort",
+    "Deluxe Rooms",
+    "King Beds",
   ];
 
   const [index, setIndex] = useState(0);
@@ -52,10 +53,13 @@ const Content_Over_Img = () => {
   }, [subIndex, index, deleting, texts]);
 
   return (
-     
+       <div className={style.sudarshan_main_container}>
+      <div className={style.sudarshan_img_container}>
+     <img src="images/home/SudarshanHome.jpg" alt="Sudarshan Resort" />
+    
       <div className={style.topcontainer}>
      <p className={style.top}>Luxury hotel & Resort Lifestyle</p>
-     <div className={style.container}>
+     {/* <div className={style.container}> */}
     <div className={style.typing_container}>
       <h1 className={style.comfort}>Comfort</h1>
       <span className={style.typing_text}>
@@ -63,10 +67,13 @@ const Content_Over_Img = () => {
       </span>
    <span className={`${style.cursor} ${blink ? style.blink : ""}`}>|</span>
     </div>
-    </div>
+    {/* </div> */}
     <div className={style.h1_Link_btn_wrapper}>
     <h1 className={style.for_your_vacation}>for your Vacation</h1>
     <Link to="/book" className={style.book_now_btn}>Book now</Link>
+   </div>
+   </div>
+   
    </div>
    </div>
     
