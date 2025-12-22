@@ -1,21 +1,16 @@
   import { useState, useEffect } from 'react'
   import { Link,useNavigate  } from 'react-router-dom'
-  import style from './Nav_Bar.module.css'
+  import style from '../styles/navBar.module.css'
   import { Menu } from 'lucide-react'
-  import Loading from './loadingpage/loading'
-
+ 
   const Nav_Bar = () => {
       const navigate = useNavigate();
     const [scroll, setScroll] = useState(false);
-    const [loading,setLoading]= useState(false)
     const [menu, setMenu]=useState(false)
-     const handleNavigation = (path) => {
-    setLoading(true);
-    setTimeout(() => {
-      navigate(path);
-      setLoading(false);
-    }, 1000);
     
+    const handleNavigation = (path) => {
+    navigate(path);
+ 
   };
 
     useEffect(() => {
@@ -47,12 +42,13 @@
           <li className={style.li} onClick={() => handleNavigation("/contact")}>Contact</li>
         </ul>
         <Menu className={style.menu} onClick={menuhandler} size={35} color='white'/>
-        <button  className={style.book_btn}><Link to="https://d.sriyog.com/sudarshanresort" className={style.linkbook}><img src="/icons/booking.svg" alt="" /></Link></button>
+          <Link to="https://d.sriyog.com/sudarshanresort" target="_blank" className={style.linkbook}><img src="/icons/booking.svg" alt="" /></Link>
+         
         </div>
 
       </nav>
       
-      {loading && <div className={style.time_conatainer}> <Loading className={style.loading}/> </div>}
+   
         
      <div className={`${style.mobile_menu} ${scroll ? style.mobile_scroll : ""} ${menu ? style.active : ""}`}>
       <ul className={style.nav_mobile}>

@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom'
 
-import  style from './herosection.module.css'
+import  style from '../styles/heroSection.module.css'
 
 const Herosection = (props) => {
   return (

@@ -108,15 +108,7 @@
     -webkit-line-clamp: unset; /* Show full text */
 }
 
-.seeMoreBtn {
-    margin-top: 10px;
-    background: none;
-    border: none;
-    color: #008000;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 1024px) {

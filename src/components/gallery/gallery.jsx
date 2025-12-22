@@ -4,14 +4,19 @@ import Navbar from '../Nav_Bar.jsx'
 import Herosection from '../herosection.jsx'
 import Allcards from './cardWrapper/allCards.jsx'
 import Footer from '../Footer.jsx'
- import { useEffect } from "react";
+import SeoHelmet from '../seoHelmet.jsx'
  
 const Gallery = () => {
-     useEffect(() => {
-      document.title = "Gallery | Sudarshan Resort";
-    }, []);
+  
   return (
     <div>
+         <SeoHelmet
+        title="Gallery | Sudarshan Resort"
+        description="Explore the gallery of Sudarshan Resort showcasing luxurious rooms, beautiful surroundings, modern facilities, and memorable experiences."
+        image="/images/gallery/1.jpg"
+        url="https://sudarshanresort.com/gallery"
+      />
+      
       <Top/>
       <Navbar/>
       <Herosection h1="Gallery" tab="Home" p="gallery"/>

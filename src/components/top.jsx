@@ -1,6 +1,6 @@
 
 import { Mail, PhoneCall,Facebook,Instagram,Linkedin } from 'lucide-react'
-import style  from './top.module.css'
+import style  from '../styles/top.module.css'
 
 
 const Top = () => {

@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import style from './Testimonials.module.css';
 import { Star } from 'lucide-react';
 
@@ -14,10 +13,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
   
-  const [expandedIndex, setExpandedIndex] = useState(null);
-  const toggleShowMore = (index) => {
-  setExpandedIndex(expandedIndex === index ? null : index);
-};
+
 
   return (
     <div className={style.container}>
@@ -40,19 +36,12 @@ const Testimonials = () => {
     </div>
 
     <p
-      className={`${style.description} ${
-        expandedIndex === index ? style.expanded : ""
-      }`}
+      className={style.description}
     >
       {item.description}
     </p>
 
-    {/* <button
-      className={style.seeMoreBtn}
-      onClick={() => toggleShowMore(index)}
-    >
-      {expandedIndex === index ? "Show Less" : "See More"}
-    </button> */}
+ 
 
   </div>
 ))}

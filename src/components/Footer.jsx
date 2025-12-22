@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import style from './Footer.module.css'
+import style from '../styles/footer.module.css'
 import { Facebook, Instagram, Linkedin, Mail, MapPin, PhoneCall } from 'lucide-react'
 const Footer = () => {
   return (

@@ -6,15 +6,18 @@ import Offer from '../services/offers/services_blog_cards.jsx'
 import Footer from '../Footer.jsx'
 import EnjoyAgro from '../EnjoyAgro.jsx'
 import Additional_Features from '../services/additionalFeatures/additional_feature.jsx'
-
- import { useEffect } from "react";
+import SeoHelmet from '../seoHelmet.jsx'
  
 const Services = () => {
-   useEffect(() => {
-      document.title = "Services | Sudarshan Resort";
-    }, []);
+ 
   return (
     <div>
+         <SeoHelmet
+        title="Services | Sudarshan Resort"
+        description="Explore the wide range of services at Sudarshan Resort including luxurious accommodations, agro experiences, modern amenities, and special offerings."
+        image="/images/services/transparentbg/bg.jpg"
+        url="https://sudarshanresort.com/services"
+      />
       <Top/>
       <NavBar />
       <Herosection h1="Services" tab="Home" p="Services" />

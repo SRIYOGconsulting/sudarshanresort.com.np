@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
-import style from './Whatsapp_logo.module.css'
+import style from '../styles/whatsappLogo.module.css'
 const Whatsapp_logo = () => {
   return (
     <div>

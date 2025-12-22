@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import style from './Starting_Page.module.css'
+import style from '../styles/startingPage.module.css'
 import { useNavigate } from 'react-router-dom';
 const Starting_Page = () => {
    const navigate = useNavigate();

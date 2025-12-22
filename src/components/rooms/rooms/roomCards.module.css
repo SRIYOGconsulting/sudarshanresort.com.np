@@ -8,6 +8,15 @@
   padding: 100px 0;
   background-color: #f3f3f3;
 }
+.roo {
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  gap: 40px; 
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  */
+}
 
 .imageWrapper {
   position: relative;
@@ -16,12 +25,7 @@
   overflow: hidden;
 }
 
-.roo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
+
 
 .imageWrapper img {
   width: 100%;

@@ -2,11 +2,19 @@
 import style from './aboutFeature.module.css'
 import { Check } from 'lucide-react'
 const about_feature_blog = () => {
+  const aboutFeature=[
+    {img:"/images/about/feature/car.webp",
+      h3:"Free WiFi Access",},
+        {img:"images/about/feature/utensils.webp",
+      h3:"Restaurant & Food Service",},
+        {img:"images/about/feature/car.webp",
+      h3:"Free Parking",},
+  ]
   return (
    <div className={style.feature_container}>
         
         <div className={style.image_main_container}>
-        <img src="images/about/feature/1.jpg" alt="" />
+        <img src="images/about/feature/1.webp" alt="" />
         </div>
         
         <div className={style.feature_content}>
@@ -54,20 +62,18 @@ const about_feature_blog = () => {
           
             <div className={style.line2}></div>
           <div className={style.feature_container_footer}>
-            <div className={style.FooterIconContainer}>
-                <img src="images/about/feature/wifi.png" alt="wifi" />
-                <h3>Free WiFi Access</h3>
+            {aboutFeature.map((item,index)=>(
+              <div key={index}>
+                <div className={style.FooterIconContainer}>
+                <img src={item.img} alt="img" />
+                <h3>{item.h3}</h3>
                 <div className={style.line3}></div>
             </div>
-            <div className={style.FooterIconContainer}>
-                <img src="images/about/feature/utensils.png" alt="utensils" />
-                <h3>Restaurant & Food Service</h3>
-                <div className={style.line3}></div>
+          
+          
             </div>
-            <div className={style.FooterIconContainer}>
-                <img src="images/about/feature/car.png" alt="car" />
-                <h3>Free Parking</h3>
-            </div>
+            ))}
+          
           </div>
           
         </div>

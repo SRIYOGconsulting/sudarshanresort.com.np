@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import style from './EnjoyArgo.module.css'
+import { useState } from 'react'
+import style from '../styles/enjoyAgro.module.css'
 import { CirclePlay, X } from 'lucide-react';
 
 const EnjoyAgro = ({bg}) => {
