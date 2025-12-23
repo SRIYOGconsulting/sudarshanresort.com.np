@@ -55,10 +55,7 @@ const HeaderContent = () => {
       <div className={style.topcontainer}>
         <p className={style.top}>Luxury hotel & Resort Lifestyle</p>
 
-        {/* Accessible static heading */}
-        {/* <h1 id="hero-headin g" className="sr-only">
-          Comfort Luxury Resort Deluxe Rooms King Beds
-        </h1> */}
+      
 
         <div className={style.typing_container} aria-hidden="true">
           <h1 className={style.comfort}>Comfort</h1>
