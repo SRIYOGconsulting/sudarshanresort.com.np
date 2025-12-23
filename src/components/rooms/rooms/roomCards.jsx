@@ -4,22 +4,20 @@ import { Link } from "react-router-dom";
 
 const Roomblogcards = () => {
   const roomcontent=[
-    {img:"images/rooms/room1.jpg",title:"Mercury",price:"2500", per:"/ per night" },
-    {img:"images/rooms/room2.jpg",title:"Venus",price:"2500", per:"/ per night" },
-     {img:"images/rooms/room1.jpg",title:"Earth",price:"2500", per:"/ per night" },
-    {img:"images/rooms/room2.jpg",title:"Mars",price:"2500", per:"/ per night" },
-     {img:"images/rooms/room1.jpg",title:"Jupiter",price:"2500", per:"/ per night" },
-    {img:"images/rooms/room2.jpg",title:"Saturn",price:"2500", per:"/ per night" },
-     {img:"images/rooms/room1.jpg",title:"Uranus",price:"2500", per:"/ per night" },
-    {img:"images/rooms/room2.jpg",title:"Neptune",price:"2500", per:"/ per night" },
-    {img:"images/rooms/room2.jpg",title:"Pluto",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room1.webp",title:"Mercury",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.webp",title:"Venus",price:"2500", per:"/ per night" },
+     {img:"images/rooms/room1.webp",title:"Earth",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.webp",title:"Mars",price:"2500", per:"/ per night" },
+     {img:"images/rooms/room1.webp",title:"Jupiter",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.webp",title:"Saturn",price:"2500", per:"/ per night" },
+     {img:"images/rooms/room1.webp",title:"Uranus",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.webp",title:"Neptune",price:"2500", per:"/ per night" },
+    {img:"images/rooms/room2.webp",title:"Pluto",price:"2500", per:"/ per night" },
   ]
   return (
 
      <div className={style.roomcard_container}>
-      
-        
-      
+
       <div className={style.roo}>
       {roomcontent.map((get,id)=>(
         <div className={style.roomcard} key={id}>

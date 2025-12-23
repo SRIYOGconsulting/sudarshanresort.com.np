@@ -16,7 +16,7 @@ const EnjoyAgro = ({bg}) => {
       <div className={style.overlay}>
         <h1>Enjoy Agro Tourism</h1>
         <h2>#VisitKoshi2025</h2>
-        <CirclePlay className={style.CirclePlay} onClick={videohandler}lik size={85}/>
+        <CirclePlay className={style.CirclePlay} onClick={videohandler} size={85}/>
       </div>
      </section>
       

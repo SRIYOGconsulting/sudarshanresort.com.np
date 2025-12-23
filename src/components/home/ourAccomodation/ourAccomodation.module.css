@@ -1,18 +1,19 @@
+/* Container Section */
 .container_accomodation_top {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
+
 .container_accomodation {
   display: flex;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  gap: 460px; /* DESKTOP gap – OK for large screens */
+  gap: 460px; /* Desktop gap – large screens */
   background-color: #f4f4f4;
 }
 
@@ -20,11 +21,13 @@
   display: flex;
   flex-direction: column;
 }
+
 .p_and_div {
   display: flex;
   gap: 10px;
 }
-.p_line_positioning{
+
+.p_line_positioning {
   color: #797979;
   font-family: "Lora";
   font-style: italic;
@@ -49,39 +52,33 @@
   line-height: 52px;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
   background-color: #f4f4f4;
+  transition: all 0.4s ease;
 }
+
 .btn:hover {
   background-color: black;
   color: white;
 }
+
+/* Images Section */
 .images_div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
   margin-top: 25px;
-  /* gap: 30px; */
 }
+
 .img_wrap {
   position: relative;
   overflow: hidden;
   width: 550px;
   height: 400px;
 }
-.img_wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* display: block; */
-}
 
+/* Keep all your animations and hover effects intact */
 .img_wrap::before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   content: "";
   position: absolute;
   inset: 0;
@@ -90,6 +87,7 @@
   transition: transform 0.7s ease;
   pointer-events: none;
 }
+
 .img_wrap:hover::before {
   transform: translateY(0);
 }
@@ -106,7 +104,6 @@
   transition: all 0.2s ease;
   text-decoration: none;
 }
-
 
 .img_wrap:hover .book_now {
   opacity: 1;
@@ -129,13 +126,8 @@
 }
 
 .img_wrap:hover .p1 {
-  opacity: 1;
-  font-family: poppins;
-  color: #ffffff;
-  line-height: 0;
-  font-size: 18px;
-  font-weight: 500;
   transform: translate(200px, -250px);
+  font-size: 18px;
 }
 
 .start_price {
@@ -145,7 +137,6 @@
   color: #ffffff;
   text-decoration: none;
   background: green;
-  border: none;
   padding: 6px 14px;
   border-radius: 4px;
   font-size: 15px;
@@ -154,31 +145,23 @@
   transform: translateY(40px);
   transition: all 0.35s ease;
 }
+
 .start_price:hover {
   background-color: #302e2d;
 }
+
 .img_wrap:hover .start_price {
-  opacity: 1;
-  color: #ffffff;
-  padding: 5px 15px 5px 15px;
-  border: none;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
   transform: translate(160px, -160px);
+  font-size: 15px;
+  color: #ffffff;
+  padding: 5px 15px;
+  cursor: pointer;
 }
 
-/* mobile responsive */
+/* Mobile Responsive */
 @media screen and (max-width: 480px) {
-
   .container_accomodation_top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
 
   .container_accomodation {
@@ -187,7 +170,7 @@
     justify-content: space-around;
     gap: 20px;
     width: 100%;
-    padding: 0 0 0 45px;
+    padding-left: 45px;
   }
 
   .content_wrap {
@@ -200,57 +183,43 @@
   }
 
   .line_horizontal {
-    position: relative;
-    left: 0;
     margin-top: 5px;
   }
 
   .btn {
-    margin: 20px 0 0 0; 
+    margin: 20px 0 0 0;
   }
-
-  /* IMAGE SECTION FIXES */
 
   .images_div {
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
     gap: 20px;
     align-items: center;
   }
 
   .img_wrap {
     width: 100%;
+    max-width: 400px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
-    height: 250px;
-     margin: 0 auto;
-  
+    margin: 0 auto;
   }
 
-  .img_wrap img {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* 🔧 FIX: reduce hover movement (mobile has no hover) */
+  /* Mobile hover adjustments */
   .img_wrap:hover .p1 {
     transform: translate(80px, -160px);
     font-size: 16px;
-
-   
   }
 
   .img_wrap:hover .start_price {
     transform: translate(55px, -40px);
     font-size: 14px;
     width: 50%;
-    
     text-align: center;
     line-height: 25px;
-    
   }
 
   .img_wrap:hover .book_now {

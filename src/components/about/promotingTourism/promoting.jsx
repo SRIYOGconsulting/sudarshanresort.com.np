@@ -1,10 +1,10 @@
-import React from 'react'
+
 import style from './promoting.module.css'
 const promoting = () => {
     const promoting=[
-      {img:"images/about/promoting/1.jpg"},
-      {img:"images/about/promoting/2.jpg"},
-      {img:"images/about/promoting/3.jpg"},
+      {img:"images/about/promoting/1.webp"},
+      {img:"images/about/promoting/2.webp"},
+      {img:"images/about/promoting/3.webp"},
     ]
   return (
     <div className={style.promoting_container}>

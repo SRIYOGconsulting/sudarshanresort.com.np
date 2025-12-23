@@ -12,7 +12,7 @@ const Aboutus = () => {
             <p className={style.content_p}>
             At Sudarshan Park and Resort, we take pride in serving the finest traditional Nepali dishes at affordable prices.</p>
             </div>
-          <img src="images/about/SudarshanAbout.jpg" className={style.img1} alt="aboutimg" />
+          <img src="images/about/SudarshanAbout.webp" className={style.img1} alt="aboutimg" />
         </div>
       </div>
     

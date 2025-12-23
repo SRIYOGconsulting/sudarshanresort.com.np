@@ -10,14 +10,14 @@ import {
 
 const TwinBedCards = () => {
   const images = [
-    { img: "images/gallery/twin_bed/twinbed1.jpg" },
-    { img: "images/gallery/twin_bed/twinbed2.jpg" },
-    { img: "images/gallery/twin_bed/twinbed3.jpg" },
-    { img: "images/gallery/twin_bed/twinbed4.jpg" },
-    { img: "images/gallery/twin_bed/twinbed5.jpg" },
-    { img: "images/gallery/twin_bed/twinbed6.jpg" },
-    { img: "images/gallery/twin_bed/twinbed7.jpg" },
-    { img: "images/gallery/twin_bed/twinbed8.jpg" },
+    { img: "images/gallery/twin_bed/twinbed1.webp" },
+    { img: "images/gallery/twin_bed/twinbed2.webp" },
+    { img: "images/gallery/twin_bed/twinbed3.webp" },
+    { img: "images/gallery/twin_bed/twinbed4.webp" },
+    { img: "images/gallery/twin_bed/twinbed5.webp" },
+    { img: "images/gallery/twin_bed/twinbed6.webp" },
+    { img: "images/gallery/twin_bed/twinbed7.webp" },
+    { img: "images/gallery/twin_bed/twinbed8.webp" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);

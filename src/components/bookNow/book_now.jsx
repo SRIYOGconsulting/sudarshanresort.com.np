@@ -1,5 +1,5 @@
 
-import Top from '../top.jsx'
+// import Top from '../top.jsx'
 import Nav_bar from '../Nav_Bar.jsx'
 import Hero from '../herosection.jsx'
 import Booking_Form from './form/booking_form.jsx'
@@ -16,9 +16,9 @@ const Book_now = () => {
         image="/images/rooms/room1.jpg"
         url="https://sudarshanresort.com/booking"
       />
-      <Top />
+      {/* <Top /> */}
       <Nav_bar />
-      <Hero h1="Booking" tab="Home" p="Booking"/>
+      <Hero h1="Booking" tab="Home" p="Booking" bg="images/background/1.webp" />
       <Booking_Form />
       <Footer/>
     </div>

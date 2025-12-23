@@ -1,5 +1,5 @@
 
-import Top from '../top.jsx'
+// import Top from '../top.jsx'
 import NavBar from '../Nav_Bar.jsx'
 import Herosection from '../herosection.jsx'
 import Offer from '../services/offers/services_blog_cards.jsx'
@@ -18,11 +18,11 @@ const Services = () => {
         image="/images/services/transparentbg/bg.jpg"
         url="https://sudarshanresort.com/services"
       />
-      <Top/>
+      {/* <Top/> */}
       <NavBar />
-      <Herosection h1="Services" tab="Home" p="Services" />
+      <Herosection h1="Services" tab="Home" p="Services" bg="images/background/1.webp"/>
       <Offer />
-     <EnjoyAgro bg="images/services/transparentbg/bg.jpg" />
+     <EnjoyAgro bg="images/services/transparentbg/bg.webp" />
      <Additional_Features />
       <Footer />
     </div>

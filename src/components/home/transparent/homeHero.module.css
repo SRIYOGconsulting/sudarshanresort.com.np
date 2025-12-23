@@ -1,0 +1,43 @@
+.sudarshan_main_container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.typing_container{
+  display: flex;
+  align-items: center;
+}
+.typing_text{
+      font-size: 2em;
+      margin-left: 10px;
+}
+.cursor{
+  font-size: 2em;
+  
+}
+.heroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.topcontainer {
+  position: relative;
+  z-index: 2;
+  top: 45%;
+  left: 20%;
+}
+.book_now_btn:focus {
+  outline: 2px solid #00ff33;
+  outline-offset: 2px;
+}

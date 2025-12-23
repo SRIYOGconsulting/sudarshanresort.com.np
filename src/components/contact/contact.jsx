@@ -1,6 +1,6 @@
 
 
-import Top from '../top.jsx'
+// import Top from '../top.jsx'
 import Nav_Bar from '../Nav_Bar.jsx'
 import Hero from '../herosection.jsx'
 import Contacts from './contactContent/contactInfo.jsx'
@@ -20,9 +20,9 @@ const Contact = () => {
         url="https://sudarshanresort.com/contact"
       />
       
-        <Top />
+        {/* <Top /> */}
         <Nav_Bar />
-        <Hero h1="Contact" tab="Home" p="contact" />
+        <Hero h1="Contact" tab="Home" p="contact" bg="images/background/1.webp"/>
         <Contacts />
         <Footer />
         <Whatsapp />

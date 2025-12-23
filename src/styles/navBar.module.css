@@ -1,3 +1,116 @@
+/* this is for top sections css */
+
+.Container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3d7703;
+    gap: 250px;
+    height: 40px;
+  
+    
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+    
+}
+.phoneContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.phoneContainer p{
+    color: white;
+   
+}
+
+
+
+.emailContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 10px;
+}
+
+.emailContainer p{
+    color: white;
+  
+}
+
+
+.socialmediaIcon{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.SudarshanHome{
+    width: 100%;
+    height: 100vh;
+    /* margin-top: 20px; */
+}
+
+
+
+/* responsive for mobile device  of top section*/
+@media screen and (max-width: 480px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .phoneContainer p,
+  .emailContainer p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+
+  .socialmediaIcon {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ================= NAVBAR CONTAINER ================= */
 .nav_container {
   position: sticky;              /* ✅ sticky navbar */
@@ -35,6 +148,8 @@
 }
 
 /* ================= DESKTOP MENU ================= */
+
+
 .nav_menu {
   display: flex;
   gap: 40px;

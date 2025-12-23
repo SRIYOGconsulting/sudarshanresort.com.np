@@ -12,7 +12,7 @@
     width: 3%;
     height: 2px;
     background-color: #008000;
-    /* margin: 20px 0; */
+ 
 }
 .services{
     display: grid;
@@ -22,11 +22,8 @@
 }
 
 .service_card{
-    /* border: 1px solid #ddd; */
-    /* border-radius: 8px; */
     padding: 25px;
-    /* text-align: center; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+   
 }
 .service_h1{
     font-size: 1.5rem;
@@ -35,11 +32,9 @@
     text-decoration:none;
   
 }
-p{
-    font-size: 1rem;
+.service_card p{
     color: #787878;
     font-family: 'Open Sans';
-    margin-top: 15px;
     line-height: 25px;
 }
 .service_card img{

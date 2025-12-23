@@ -1,7 +1,5 @@
-import SeoHelmet from '../seoHelmet.jsx'
-
+  import SeoHelmet from '../seoHelmet.jsx'
   import Herosection from '../herosection.jsx'
-  import Top from '../top.jsx'
   import Nav_Bar from '../Nav_Bar.jsx'
   import Roomcards from './rooms/roomCards.jsx'
   import Footer from '../Footer.jsx'
@@ -15,12 +13,10 @@ import SeoHelmet from '../seoHelmet.jsx'
         image="/images/rooms/room1.jpg"
         url="https://sudarshanresort.com/rooms"
       />
-
- 
-
-      <Top />
+        
         <Nav_Bar />
-        <Herosection h1="Rooms" tab="Home" p="Rooms"/>
+        
+        <Herosection h1="Rooms" tab="Home" p="Rooms" bg="images/background/1.webp"/>
         <Roomcards />
         <Footer />
       </div>

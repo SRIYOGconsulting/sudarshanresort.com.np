@@ -1,5 +1,5 @@
 
-import Top from '../top.jsx'
+// import Top from '../top.jsx'
 import Navbar from '../Nav_Bar.jsx'
 import Herosection from '../herosection.jsx'
 import Allcards from './cardWrapper/allCards.jsx'
@@ -17,9 +17,9 @@ const Gallery = () => {
         url="https://sudarshanresort.com/gallery"
       />
       
-      <Top/>
+      {/* <Top/> */}
       <Navbar/>
-      <Herosection h1="Gallery" tab="Home" p="gallery"/>
+      <Herosection h1="Gallery" tab="Home" p="gallery" bg="images/background/1.webp"/>
       <Allcards/>
       <Footer/>
       

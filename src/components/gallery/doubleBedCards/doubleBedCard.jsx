@@ -5,12 +5,12 @@ import { SquareArrowOutUpRight, X, ChevronLeft, ChevronRight } from 'lucide-reac
 
 const Doublebed_cards = () => {
     const images = [
-      {id:1, img:"images/gallery/double_bed/doublebed1.jpg", size:"card1"},
-      {id:2, img:"images/gallery/double_bed/doublebed2.jpg", size:"card2"},
-      {id:3, img:"images/gallery/double_bed/doublebed3.jpg", size:"card3"},
-      {id:4, img:"images/gallery/double_bed/doublebed4.jpg", size:"card4"},
-      {id:5, img:"images/gallery/double_bed/doublebed5.jpg", size:"card5"},
-      {id:6, img:"images/gallery/double_bed/doublebed6.jpg", size:"card6"}
+      {id:1, img:"images/gallery/double_bed/doublebed1.webp", size:"card1"},
+      {id:2, img:"images/gallery/double_bed/doublebed2.webp", size:"card2"},
+      {id:3, img:"images/gallery/double_bed/doublebed3.webp", size:"card3"},
+      {id:4, img:"images/gallery/double_bed/doublebed4.webp", size:"card4"},
+      {id:5, img:"images/gallery/double_bed/doublebed5.webp", size:"card5"},
+      {id:6, img:"images/gallery/double_bed/doublebed6.webp", size:"card6"}
       ];
      const [currentIndex, setCurrentIndex] = useState(null);
     

@@ -1,7 +1,7 @@
 
 import style from './about.module.css'
 
-import Top from '../top.jsx'
+// import Top from '../top.jsx'
 import Nav_Bar from '../Nav_Bar.jsx'
 import Herosection from '../herosection.jsx'
 import AboutUs from './aboutUs/aboutUs.jsx'
@@ -26,15 +26,14 @@ const About = () => {
         image="/images/about/SudarshanAbout.jpg"
         url="https://sudarshanresort.com/about"
       />
-            
-            
-      <Top />
+      
+      {/* <Top /> */}
       <Nav_Bar />
-      <Herosection h1="About" tab="Home" p="about"/>
+      <Herosection h1="About" tab="Home" p="about" bg="images/background/1.webp"/>
       <AboutUs />
       <Promoting/>
      <AboutFeature/>
-     <EnjoyAgro bg="images/about/transparentbg/1.jpg" />
+     <EnjoyAgro bg="images/about/transparentbg/1.webp" />
      <Footer/>
     </div>
   )
