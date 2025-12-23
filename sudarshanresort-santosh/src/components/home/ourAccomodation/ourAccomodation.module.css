@@ -1,0 +1,229 @@
+/* Container Section */
+.container_accomodation_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 100px 0;
+}
+
+.container_accomodation {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 460px; /* Desktop gap – large screens */
+  background-color: #f4f4f4;
+}
+
+.content_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.p_and_div {
+  display: flex;
+  gap: 10px;
+}
+
+.p_line_positioning {
+  color: #797979;
+  font-family: "Lora";
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.line_horizontal {
+  border-bottom: 2px solid black;
+  width: 50px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #505050;
+  font-size: 17px;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #242424;
+  width: 202px;
+  max-width: 100%;
+  line-height: 52px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f4f4f4;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Images Section */
+.images_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.img_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 550px;
+  height: 400px;
+}
+
+/* Keep all your animations and hover effects intact */
+.img_wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateY(100%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.img_wrap:hover::before {
+  transform: translateY(0);
+}
+
+.book_now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-family: "Poppins";
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.img_wrap:hover .book_now {
+  opacity: 1;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.p1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 500;
+  opacity: 1;
+  transform: translateY(-50px);
+  transition: all 0.35s ease;
+}
+
+.img_wrap:hover .p1 {
+  transform: translate(200px, -250px);
+  font-size: 18px;
+}
+
+.start_price {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background: green;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: "Poppins";
+  opacity: 1;
+  transform: translateY(40px);
+  transition: all 0.35s ease;
+}
+
+.start_price:hover {
+  background-color: #302e2d;
+}
+
+.img_wrap:hover .start_price {
+  transform: translate(160px, -160px);
+  font-size: 15px;
+  color: #ffffff;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+  .container_accomodation_top {
+    padding: 50px 0;
+  }
+
+  .container_accomodation {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    padding-left: 45px;
+  }
+
+  .content_wrap {
+    width: 100%;
+  }
+
+  .p_and_div {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .line_horizontal {
+    margin-top: 5px;
+  }
+
+  .btn {
+    margin: 20px 0 0 0;
+  }
+
+  .images_div {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .img_wrap {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* Mobile hover adjustments */
+  .img_wrap:hover .p1 {
+    transform: translate(80px, -160px);
+    font-size: 16px;
+  }
+
+  .img_wrap:hover .start_price {
+    transform: translate(55px, -40px);
+    font-size: 14px;
+    width: 50%;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .img_wrap:hover .book_now {
+    transform: translate(-50%, 35px) scale(1);
+    font-size: 16px;
+  }
+}

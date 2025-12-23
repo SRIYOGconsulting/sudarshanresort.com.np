@@ -1,0 +1,301 @@
+/* this is for top sections css */
+
+.Container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3d7703;
+    gap: 250px;
+    height: 40px;
+  
+    
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+    
+}
+.phoneContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.phoneContainer p{
+    color: white;
+   
+}
+
+
+
+.emailContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 10px;
+}
+
+.emailContainer p{
+    color: white;
+  
+}
+
+
+.socialmediaIcon{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.SudarshanHome{
+    width: 100%;
+    height: 100vh;
+    /* margin-top: 20px; */
+}
+
+
+
+/* responsive for mobile device  of top section*/
+@media screen and (max-width: 480px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .phoneContainer p,
+  .emailContainer p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+
+  .socialmediaIcon {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================= NAVBAR CONTAINER ================= */
+.nav_container {
+  position: sticky;              /* ✅ sticky navbar */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 110px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 0 40px;
+}
+.book_btn img{
+  height: 30px;
+}
+.book_btn{
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar color change on scroll */
+.nav_scroll {
+  background: #787878;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ================= LOGO ================= */
+.nav_logo img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ================= DESKTOP MENU ================= */
+
+
+.nav_menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.li {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.li:hover {
+  color: #7fbf42;
+}
+
+/* ================= RIGHT SIDE ================= */
+.nav_button_both_container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ================= BOOK BUTTON ================= */
+.linkbook {
+  text-decoration: none;
+  font-size: 16px;
+  
+}
+.linkbook img{
+  height: 30px;
+  
+}
+
+/* ================= LOADING OVERLAY ================= */
+.time_conatainer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+}
+
+/* ================= MOBILE ICON ================= */
+.menu {
+  visibility: hidden; /* shown only in mobile */
+}
+
+/* ================= MOBILE DROPDOWN ================= */
+.mobile_menu {
+  
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  top: 110px;                 
+  z-index: 999;
+  background: #1a1a1a;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+/* Dropdown active */
+.mobile_menu.active {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile list */
+.nav_mobile {
+  list-style: none;
+
+  background-color:#787878;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile_menu li,
+.mobile_menu a {
+  display: block;
+  padding: 12px 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #555;
+}
+
+.mobile_menu li:hover,
+.mobile_menu a:hover {
+  background: #d68e08;
+ 
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 480px) {
+
+  .nav_container {
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .nav_logo img {
+    height: 70px;
+    width: 70px;
+  }
+
+  /* Hide desktop menu */
+  .nav_menu {
+    display: none;
+  }
+
+  .book_btn {
+    display: none;
+  }
+
+  /* Show menu icon */
+  .menu {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  /* Adjust dropdown position */
+  .mobile_menu {
+    top: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+  }
+  .nav_mobile{
+    /* margin-left: 15px; */
+    border: 1px solid white;
+    margin-top: 50px;
+    width: 80%;
+  }
+}
+
+/* ================= SCROLL EFFECT FOR MOBILE MENU ================= */
+.mobile_scroll {
+  background: #787878;
+}
