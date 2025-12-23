@@ -1,7 +1,3 @@
-Below is a clear, professional **concept note** based on the information you provided. You can use this for proposals, investor briefs, tourism boards, or marketing planning.
-
----
-
 ## Concept Note
 
 ### Sudarshan Resort, Haraincha
@@ -71,10 +67,3 @@ Sudarshan Resort is strategically located to ensure convenience and accessibilit
 
 Sudarshan Resort in Haraincha represents a balanced hospitality concept that combines elegant accommodation, comprehensive facilities, and a family-oriented environment. With its strategic location, modern amenities, and inclusive services, the resort is well-positioned to become a preferred destination for relaxation, recreation, and memorable stays.
 
----
-
-If you want, I can also:
-
-* Shorten this into a **1-page concept note**
-* Rewrite it for **investors or tourism promotion**
-* Add **mission, objectives, or sustainability focus**
