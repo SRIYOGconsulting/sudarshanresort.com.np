@@ -1,0 +1,69 @@
+.Aboutcontainer {
+  position: relative;
+  height: 32vh;
+  overflow: hidden;
+}
+
+.heroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.about_container {
+  position: relative;
+  z-index: 2;
+  top: 100px;
+  left: 18%;
+}
+
+.about_container h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.tab_container {
+  display: flex;
+  gap: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.tab_container p {
+  color: #ccc;
+}
+
+.navigation_link {
+  text-decoration: none;
+  color: white;
+}
+.navigation_link:focus {
+  outline: 3px solid green;
+  outline-offset: 2px;
+}
+
+.navigation_link:hover {
+  color: green;
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .about_container {
+    left: 10%;
+    top: 80px;
+  }
+
+  .about_container h1 {
+    font-size: 32px;
+  }
+}
