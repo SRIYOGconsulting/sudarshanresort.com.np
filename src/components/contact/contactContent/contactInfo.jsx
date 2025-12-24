@@ -3,7 +3,7 @@ import style from './contactInfo.module.css'
 import Map from '../map/map.jsx'
 import { Mail, MapPin, PhoneCall } from 'lucide-react'
 
-const Contact = () => {
+const Contacts = () => {
   return (
     <div className={style.containerallwrap}>
         <div>
@@ -49,4 +49,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contacts
