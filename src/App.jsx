@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Routes, Route } from 'react-router-dom'
 
 import Starting_Page from './components/Starting_Page.jsx'
