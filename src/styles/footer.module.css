@@ -3,17 +3,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
+   
     
 }
 .footer_hero_container{
      display: flex;
-    /* align-items: center; */
     justify-content:center;
     gap: 100px;
     background-color: green;
     color: white;
-    padding: 30px;
+    padding: 50px;
   
 }
 
@@ -89,7 +88,6 @@
 .container_contact_info p{
     font-family: 'Open Sans';
     font-size: 16px;
-    
     color: white;
 }
 .container_contact_info h2{
@@ -115,7 +113,7 @@
 
 .container_bottom{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     font-size: 16px;
     color: white;
@@ -137,6 +135,13 @@
 .phone_number, .mail{
     text-decoration: none;
     color: white;
+}
+
+.technologyPartner{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 

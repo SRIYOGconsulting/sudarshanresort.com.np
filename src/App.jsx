@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Starting_Page from './components/Starting_Page.jsx'
-import Home from './components/home/home.jsx' 
+import Home from './components/home/home.jsx'
 import About from './components/about/about.jsx'
 import Room from './components/rooms/room.jsx'
 import Services from './components/services/services.jsx'
@@ -10,7 +10,8 @@ import Gallery from './components/gallery/gallery.jsx'
 import Contact from './components/contact/contact.jsx'
 import ScrollToTop from "./components/scrolltop.jsx";
 import Book_Now from './components/bookNow/book_now.jsx'
-import Location from './components/location/locatin.jsx'
+import Location from './components/location/location.jsx'
+
 
 const App = () => {
   return (
@@ -23,8 +24,8 @@ const App = () => {
       <Route path='/rooms' element={<Room />} />
       <Route path='/services' element={<Services />} />
       <Route path='/gallery' element={<Gallery />} />
-        <Route path='/location' element={<Location />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/location' element={<Location />} />
       <Route path='/book' element={<Book_Now />} />
         
     </Routes>

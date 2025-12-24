@@ -79,17 +79,19 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className={style.container_bottom}>
         <p>Copyright © 2025 Sudarshan Agro Resort. All rights reserved.</p>
+        <div className={style.technologyPartner}>
         <p>
-          Technology Partner: 
+          Technology Partner:
+        </p>
           <a
             className={style.pracas}
             href="https://sriyog.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-           SRIYOG
+            SRIYOG
           </a>
-        </p>
+          </div>
       </div>
     </footer>
   );
