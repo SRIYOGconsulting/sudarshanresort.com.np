@@ -64,12 +64,12 @@ const Footer = () => {
 
           <div className={style.phone_container}>
             <PhoneCall className={style.mappin} color="white" size={20} />
-            <a href="tel:+9779852020058">+977-9852020058</a>
+            <a className={style.phone_number} href="tel:+9779852020058">+977-9852020058</a>
           </div>
 
           <div className={style.mail_container}>
             <Mail className={style.mappin} color="white" size={20} />
-            <a href="mailto:booking@sudarshanagroresort.com.np">
+            <a className={style.mail} href="mailto:booking@sudarshanagroresort.com.np">
               booking@sudarshanagroresort.com.np
             </a>
           </div>

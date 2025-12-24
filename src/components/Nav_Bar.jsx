@@ -50,12 +50,14 @@ const Nav_Bar = () => {
           <li><Link to="/rooms" className={style.li}>Rooms</Link></li>
           <li><Link to="/services" className={style.li}>Services</Link></li>
           <li><Link to="/gallery" className={style.li}>Gallery</Link></li>
+          {/* added location */}
+           <li><Link to="/location" className={style.li}>location</Link></li>
           <li><Link to="/contact" className={style.li}>Contact</Link></li>
             <Link
           to="https://d.sriyog.com/sudarshanresort"
           target="_blank"
           className={style.linkBook}
-        >
+          >
           <img src="/icons/booking.svg" alt="booking-svg" />
         </Link>
         </ul>

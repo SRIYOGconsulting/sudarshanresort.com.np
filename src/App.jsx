@@ -10,6 +10,7 @@ import Gallery from './components/gallery/gallery.jsx'
 import Contact from './components/contact/contact.jsx'
 import ScrollToTop from "./components/scrolltop.jsx";
 import Book_Now from './components/bookNow/book_now.jsx'
+import Location from './components/location/locatin.jsx'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route path='/rooms' element={<Room />} />
       <Route path='/services' element={<Services />} />
       <Route path='/gallery' element={<Gallery />} />
+        <Route path='/location' element={<Location />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/book' element={<Book_Now />} />
         
