@@ -14,10 +14,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  
   height: auto;
-  gap: 20px;
+  gap: 65px;
   border-radius: 10px;
+}
+.img_promote{
+ width: 100%;
+ height: auto;
 }
 .promoting_container h1 {
   color: black;

@@ -68,7 +68,7 @@ const about_feature_blog = () => {
                 <img src={item.img} alt="img" />
                 <h3>{item.h3}</h3>
                 <div className={style.line3}></div>
-            </div>
+                </div>
           
           
             </div>
