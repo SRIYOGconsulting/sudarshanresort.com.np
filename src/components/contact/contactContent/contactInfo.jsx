@@ -11,7 +11,7 @@ const Contacts = () => {
         </div>
      <div className={style.contentWrapper}>
         <div className={style.sudarshanresort_header_line_wrapper}>
-        <h1>Sudarshan Agro Resort</h1>
+        <h2 className={style.h2}>Sudarshan Agro Resort</h2>
         <div className={style.line}></div>
         </div>
         
@@ -25,7 +25,7 @@ const Contacts = () => {
         </div>
         
          <div>
-            <h2>Email</h2>
+            <h2 className={style.h2}>Email</h2>
             <div className={style.icon_and_p_wrapper}>
             <Mail className={style.icon} />
             <p>booking@sudarshanagroresort.com.np</p>
@@ -34,7 +34,7 @@ const Contacts = () => {
         </div>
         
          <div>
-            <h2>Phone No.</h2>
+            <h2 className={style.h2}>Phone No.</h2>
             <div className={style.icon_and_p_wrapper}>
             <PhoneCall className={style.icon}  />
             <p>+977-9852020058</p>
