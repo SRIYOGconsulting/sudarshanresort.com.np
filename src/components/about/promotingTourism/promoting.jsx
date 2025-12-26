@@ -9,6 +9,7 @@ const promoting = () => {
   return (
     <div className={style.promoting_container}>
         <h1>"Promoting Tourism"</h1>
+         <div className={style.line_below_heading} aria-hidden="true"></div> 
         <div className={style.image_container}>
         {promoting.map((promote,index)=>(
           <img className={style.img_promote} key={index} src={promote.img} alt="" />

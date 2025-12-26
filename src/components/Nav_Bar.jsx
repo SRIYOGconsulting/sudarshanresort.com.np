@@ -65,7 +65,9 @@ const Nav_Bar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`${style.mobileMenu} ${menu ? style.active : ""}`}>
+      <div   className={`${style.mobileMenu} ${menu ? style.active : ""} `}>
+       
+          
         <ul className={style.navMobile}>
           <li><Link to="/" onClick={() => setMenu(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setMenu(false)}>About</Link></li>

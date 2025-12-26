@@ -72,7 +72,7 @@ const HeaderContent = () => {
             className={style.book_now_btn}
             aria-label="Book a room at Sudarshan Resort"
           >
-            Book now
+            Book Now
           </Link>
         </div>
       </div>

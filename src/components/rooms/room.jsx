@@ -16,7 +16,7 @@
         
         <Nav_Bar />
         
-        <Herosection h1="Rooms" tab="Home" p="Rooms" bg="images/background/1.webp"/>
+        <Herosection h1="Rooms" tab="Home" p="rooms" bg="images/background/1.webp"/>
         <Roomcards />
         <Footer />
       </div>

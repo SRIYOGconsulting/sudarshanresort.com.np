@@ -26,7 +26,7 @@ const about_feature_blog = () => {
         <div className={style.feature_content_container}>
           <div className={style.list_container}>
             <ul className={style.list_container_check}>
-              <div>
+              <div className={style.checklistAllwrapper}>
               <li>
               <Check color="#00ff33" strokeWidth={3} />
               <p>In Room Dinning</p>
@@ -43,7 +43,7 @@ const about_feature_blog = () => {
               </li>
               </div>
               
-              <div>
+              <div className={style.checklistAllwrapper}>
                <li>
               <Check color="#00ff33" strokeWidth={3} />
               <p>Pet Friendly Accomodation</p>

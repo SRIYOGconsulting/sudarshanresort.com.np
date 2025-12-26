@@ -25,15 +25,7 @@ const EnjoyAgro = ({bg}) => {
       {video && (
       <div className={style.overlay5} > 
       <div className={style.frame_close_wrapper}>
-      <iframe
-     
-      className={style.frame}
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
+     <iframe className={style.frame}  src="https://www.youtube.com/embed/-iARRuFU_FM?si=W3UsVtwnVxNdxdA9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <X size={35} className={style.cross}  onClick={cancle} style={{ cursor: "pointer",}} />
      </div>
       </div>
@@ -41,7 +33,7 @@ const EnjoyAgro = ({bg}) => {
       </div>
   );
   
-
+ 
 }
 
 export default EnjoyAgro

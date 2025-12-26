@@ -3,25 +3,8 @@
    grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 180px;
   gap: 12px;
-  /* background-color: red; */
-  /* max-width: 1200px; */
-  /* margin: auto; */
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .imgcontainer {
  
   position: relative;
@@ -136,4 +119,26 @@
 .card4{
    grid-column: span 1;
      grid-row: span 2;
+}
+
+@media screen and (max-width:480px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgcontainer img {
+ 
+  width: 80%;
+  
+ 
+}
+.imgcontainer{
+     display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+
 }

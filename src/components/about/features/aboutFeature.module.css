@@ -129,25 +129,25 @@
   }
 
   .line {
-    margin-left: 8%;
+    margin-bottom: 15px;
   }
 
   .line2 {
     width: 320px;
-    margin-left: 40%;
-    margin-bottom: 25px;
+
   }
 
   .feature_content {
     margin-left: 10px;
     padding-right: 1px;
     gap: 1px;
+            margin-left: 60px;
   }
 
   .feature_container_footer {
     flex-direction: column;
     gap: 0;
-    margin-left: 5%;
+   
   }
 
   .FooterIconContainer img {
@@ -167,5 +167,8 @@
 
   .feature_container_header h1 {
     margin-left: 0;
+  }
+  .checklistAllwrapper li{
+    margin-top: 10px;
   }
 }

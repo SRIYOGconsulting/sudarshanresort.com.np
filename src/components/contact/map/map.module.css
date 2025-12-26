@@ -1,0 +1,16 @@
+
+.containermap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mapSize{
+   width:700px ;
+height:450px ;
+}
+@media screen and (max-width:480px) {
+    .mapSize{
+   width:350px ;
+height:300px ;
+}
+}

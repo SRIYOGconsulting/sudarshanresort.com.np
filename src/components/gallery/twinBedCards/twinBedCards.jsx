@@ -43,6 +43,7 @@ const TwinBedCards = () => {
       <div className={style.container}>
         {images.map((img, index) => (
           <div className={style.imgcontainer} key={index}>
+            
             <img src={img.img} alt="img" />
             <div className={style.overlay}>
               <SquareArrowOutUpRight
@@ -76,7 +77,7 @@ const TwinBedCards = () => {
             }}
           />
           <img
-            src={images[currentIndex]}
+            src={images[currentIndex].img}
             alt="fullscreen"
             className={style.fullscreenImg}
           />

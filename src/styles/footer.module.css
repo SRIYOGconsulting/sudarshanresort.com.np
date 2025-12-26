@@ -183,8 +183,8 @@
     font-size: 16px;
     color: white;
     height:fit-content;
-    gap: 1px;
-   
+    gap: 10px;
+    padding: 5px;
     background-color: #141414;
    
 }

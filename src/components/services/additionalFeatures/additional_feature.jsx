@@ -20,7 +20,7 @@ const Additional_feature = () => {
             <div key={item.title} className={style.contentwrap}>
                 <img className={style.img} src={item.img} alt={item.title} />
                 <Link className={style.titlelink} onClick={() => window.scrollTo(0,0)}><h2>{item.title}</h2></Link>
-                <p>{item.description}</p>
+                <p className={style.describe}>{item.description}</p>
             </div>
         ))}
         </div>

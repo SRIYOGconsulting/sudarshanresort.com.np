@@ -1,14 +1,13 @@
 
 .containerallwrap{
     display: flex;
-    /* justify-content: flex-end; */
     align-items: center;
+    justify-content: center;
     gap: 40px;
     padding:100px 21px;;
     margin-left: 50px;
     
-    /* width: 100%; */
-    /* background-color: red; */
+   
 }
 .contentWrapper{
     display: flex;
@@ -16,8 +15,8 @@
     gap: 50px;
 }
 .sudarshanresort_header_line_wrapper{
-    /* background-color: red; */
     width: 100%;
+    
 }
 .h2{
     font-family: 'Poppins';
@@ -28,25 +27,34 @@
 .icon_and_p_wrapper{
     display: flex;
     align-items: center;
+    margin-top: 20px;
     gap: 10px;
     
 }
-.icon{
-    margin-top: 15px;
-}
+
 .icon_and_p_wrapper p{
-        color: #797979;
+    color: #797979;
     font-family: 'Poppins';
     font-size: 16px;
 }
 
 .line{
     margin-top: 20px;
-    width: 700px;
+    width: 350px;
     border-bottom: 1px solid #D4D4D4;
     
-   
-   
-   
+
+}
+@media screen and (max-width:480px) {
+    .containerallwrap{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
     
+}
+.line{
+    width: 300px;
+    
+}
+
 }

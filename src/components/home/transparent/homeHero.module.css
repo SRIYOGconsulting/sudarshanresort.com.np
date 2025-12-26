@@ -29,7 +29,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45); */
 }
 
 .topcontainer {
@@ -45,6 +45,11 @@
   background-color: green;
  width: fit-content;
   padding: 15px 40px;
+}
+
+.book_now_btn:hover{
+  background-color: black;
+  color: white;
 }
 .h1_Link_btn_wrapper{
   display: flex;
@@ -69,7 +74,6 @@
   font-size: 55px;
   margin-left: 5px;
   color: white;
-  /* Blinking animation */
   animation: blink 1s step-start infinite;
 }
 
@@ -81,4 +85,32 @@
   25%, 75% {
     opacity: 0;
   }
+}
+
+
+@media screen and (max-width: 480px){
+  .topcontainer {
+    padding-left: 10%;
+    align-items: flex-start;
+    left:0;
+  }
+  .comfort{
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  .typing_text {
+    font-size: 30px;
+    margin-left: 0;
+   
+  }
+  .for_your_vacation{
+    font-size: 30px;
+  }
+  .cursor {
+  font-size: 30px;
+  margin-left: 5px;
+  color: white;
+  animation: blink 1s step-start infinite;
+}
+  
 }
