@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Mail, PhoneCall, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Nav_Bar = () => {
   const [scroll, setScroll] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [showTopBar, setShowTopBar] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -16,42 +17,44 @@ const Nav_Bar = () => {
 
   return (
     <>
-      {/*  TOP GREEN BAR  */}
-      <div className="flex justify-around items-center bg-[#3d7703] gap-[250px] h-[40px]
-        max-[480px]:flex-col max-[480px]:gap-0 max-[480px]:py-[10px] text-center">
+      {/* TOP GREEN BAR */}
+{showTopBar && (
+  <div className="w-full bg-[#3d7703] h-[40px]
+                  flex items-center justify-center
+                  text-white px-4">
 
-        <div className="flex justify-center items-center gap-[20px]
-          max-[480px]:flex-col max-[480px]:gap-0">
+    <div className="flex items-center gap-3">
+      <p className="italic whitespace-nowrap font-semibold text-[16px]">
+        Book your perfect stay with us.
+      </p>
 
-          <a href="tel:+9779852020058">
-            <div className="flex items-center justify-center gap-[10px] max-[480px]:gap-[8px]">
-              <PhoneCall color="white" size={20} />
-              <p className="text-white text-[14px] m-0">+977 9852020058</p>
-            </div>
-          </a>
+      {/* Book and View Button */}
+      <a
+        href="https://d.sriyog.com/sudarshanresort"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border border-white rounded-md px-3 py-[2px]
+                   hover:bg-white hover:text-[#3d7703]
+                   transition-all duration-200 text-sm"
+      >
+        Book Now
+      </a>
 
-          <a href="mailto:booking@sudarshanagroresort.com.np">
-            <div className="flex items-center justify-center gap-[10px] max-[480px]:gap-[8px]">
-              <Mail color="white" size={20} />
-              <p className="text-white text-[14px] m-0">
-                booking@sudarshanagroresort.com.np
-              </p>
-            </div>
-          </a>
-        </div>
+      {/* Close X (Lucide) */}
+      <button
+        onClick={() => setShowTopBar(false)}
+        className="border border-white rounded-md px-1 py-[2px]
+                   hover:bg-white hover:text-[#3d7703]
+                   transition-all duration-200 flex items-center justify-center
+                   text-white hover:opacity-70 transition"
+        aria-label="Close top bar"
+      >
+        <X size={20} />
+      </button>
+    </div>
+  </div>
+)}
 
-        <div className="flex gap-[20px] max-[480px]:justify-center max-[480px]:gap-[16px]">
-          <a href="https://facebook.com" target="_blank">
-            <Facebook color="white" size={20} />
-          </a>
-          <a href="https://instagram.com" target="_blank">
-            <Instagram color="white" size={20} />
-          </a>
-          <a href="https://linkedin.com" target="_blank">
-            <Linkedin color="white" size={20} />
-          </a>
-        </div>
-      </div>
 
       {/* NAVBAR */}
       <nav
@@ -105,7 +108,7 @@ const Nav_Bar = () => {
             target="_blank"
             className="max-[480px]:hidden"
           >
-            <img src="/icons/booking.svg" alt="booking" className="h-[30px]" />
+            <img src="/icons/booking.svg" alt="booking" className="h-[45px] rounded-md" />
           </Link>
         </div>
       </nav>
