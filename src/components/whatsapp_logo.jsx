@@ -1,12 +1,25 @@
+import { Link } from "react-router-dom";
 
-import { Link } from 'react-router-dom'
-import style from '../styles/whatsappLogo.module.css'
 const Whatsapp_logo = () => {
   return (
     <div>
-      <Link><img className={style.whatsapp} src="og/whatsapplogo.webp" alt="whatsapp" aria-label='whatsapp' /></Link>
+      <Link to="#">
+        <img
+          src="og/whatsapplogo.webp"
+          alt="whatsapp"
+          aria-label="whatsapp"
+          className="
+            fixed
+            bottom-[100px]
+            right-[20px]
+            w-[60px]
+            h-[60px]
+            z-[100]
+          "
+        />
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Whatsapp_logo
+export default Whatsapp_logo;

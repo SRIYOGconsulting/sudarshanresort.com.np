@@ -1,47 +1,56 @@
-import { useState } from 'react'
-import style from '../styles/enjoyAgro.module.css'
+import { useState } from 'react';
 import { CirclePlay, X } from 'lucide-react';
 
-const EnjoyAgro = ({bg}) => {
-  const [video,setVideo]=useState(false)
-  const videohandler=()=>{
+const EnjoyAgro = ({ bg }) => {
+  const [video, setVideo] = useState(false);
+
+  const videohandler = () => {
     setVideo(true);
-  }
-  const cancle=()=>{
-    setVideo(false)
-  }
+  };
+
+  const cancle = () => {
+    setVideo(false);
+  };
+
   return (
-    <div className={style.hero_all_container}>
-      <section className={style.hero} style={{ "--bgImage": `url(${bg})` }}>
-      <div className={style.overlay}>
-        <h1>Enjoy Agro Tourism</h1>
-        <h2>#VisitKoshi2025</h2>
-        <CirclePlay className={style.CirclePlay} onClick={videohandler} size={85}/>
-      </div>
-     </section>
-      
-      
-      {/* extra popup added */}
+    <div className="relative">
+      <section 
+        className="w-full bg-cover bg-center bg-fixed overflow-hidden" 
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <div className="relative w-full h-[55vh] flex flex-col justify-center items-center text-white text-center px-5">
+          <h1 className="text-5xl mb-2">Enjoy Agro Tourism</h1>
+          <h2 className="text-6xl font-light text-green-500 mb-5">#VisitKoshi2025</h2>
+          <CirclePlay 
+            className="cursor-pointer transition-transform transform hover:scale-110" 
+            onClick={videohandler} 
+            size={85} 
+          />
+        </div>
+      </section>
+
+      {/* Video Overlay */}
       {video && (
-      <div className={style.overlay5} > 
-      <div className={style.frame_close_wrapper}>
-      <iframe
-     
-      className={style.frame}
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-      <X size={35} className={style.cross}  onClick={cancle} style={{ cursor: "pointer",}} />
-     </div>
-      </div>
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className="relative flex mb-6">
+            <iframe
+              className="w-[860px] h-[450px]"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+            <X 
+              size={35} 
+              className="absolute bottom-110 left-[880px] mt-52 text-white cursor-pointer" 
+              onClick={cancle} 
+            />
+          </div>
+        </div>
       )}
-      </div>
+    </div>
   );
-  
+};
 
-}
-
-export default EnjoyAgro
+export default EnjoyAgro;

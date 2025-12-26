@@ -1,106 +1,148 @@
-  import { useState, useEffect } from 'react'
-  import { Link, } from 'react-router-dom'
-  import style from '../styles/navBar.module.css'
-  import { Menu } from 'lucide-react'
-  
- import { Mail, PhoneCall,Facebook,Instagram,Linkedin } from 'lucide-react'
-// import style  from '../styles/navBar.module.css'
-  const Nav_Bar = () => {
-    const [scroll, setScroll] = useState(false);
-    const [menu, setMenu]=useState(false)
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
+const Nav_Bar = () => {
+  const [scroll, setScroll] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [showTopBar, setShowTopBar] = useState(true);
 
-    useEffect(() => {
-      const onScroll = () => {
-        setScroll(window.scrollY > 50);
-      };
-    
+  useEffect(() => {
+    const onScroll = () => {
+      setScroll(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-      window.addEventListener("scroll", onScroll);
-      return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-    
-    const menuhandler=()=>{
-       setMenu(prev => !prev);
-    }
-    
-    return (<>
-    
-    
-       <div className={style.Container}>
-      <div className={style.mainContainer}>
-        <a href="tel:+9779852020058">
-        <div className={style.phoneContainer}>
-         <PhoneCall color='white' size={20}/>
-         <p>+977 9852020058</p>
-        </div>
-        </a>
-        
-        <a href="mailto:booking@sudarshanagroresort.com.np">
-        <div className={style.emailContainer} >
-          <Mail color='white' size={20}/>
-          <p>booking@sudarshanagroresort.com.np</p>
-        </div>
-        </a>
-      </div>
-      <div className={style.socialmediaIcon}>
-        <a href="https://facebook.com" target='_blank'><Facebook color='white' size={20}  cursor="Pointer"/></a>
-        <a href="https://instagram.com" target='_blank'><Instagram color='white' size={20} cursor="Pointer"/></a>
-        <a href="https://linkedin.com" target='_blank'><Linkedin color='white' size={20} cursor="Pointer"/></a>
-      </div>
-   
-     
-     
+  return (
+    <>
+      {/* TOP GREEN BAR */}
+{showTopBar && (
+  <div className="w-full bg-[#3d7703] h-[40px]
+                  flex items-center justify-center
+                  text-white px-4">
+
+    <div className="flex items-center gap-3">
+      <p className="italic whitespace-nowrap font-semibold text-[16px]">
+        Book your perfect stay with us.
+      </p>
+
+      {/* Book and View Button */}
+      <a
+        href="https://d.sriyog.com/sudarshanresort"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border border-white rounded-md px-3 py-[2px]
+                   hover:bg-white hover:text-[#3d7703]
+                   transition-all duration-200 text-sm"
+      >
+        Book Now
+      </a>
+
+      {/* Close X (Lucide) */}
+      <button
+        onClick={() => setShowTopBar(false)}
+        className="border border-white rounded-md px-1 py-[2px]
+                   hover:bg-white hover:text-[#3d7703]
+                   transition-all duration-200 flex items-center justify-center
+                   text-white hover:opacity-70 transition"
+        aria-label="Close top bar"
+      >
+        <X size={20} />
+      </button>
     </div>
-    
-    {/* for nav bar */}
-     <nav className={`${style.nav_container} ${scroll ? style.nav_scroll : ""}`}>
-  <div className={style.nav_logo}>
-    <img src="favicon/logo.webp" alt="logo" />
   </div>
-  <div className={style.nav_button_both_container}>
-    <ul className={style.nav_menu}>
-      <li><Link to="/" className={style.li}>Home</Link></li>
-      <li><Link to="/about" className={style.li}>About</Link></li>
-      <li><Link to="/rooms" className={style.li}>Rooms</Link></li>
-      <li><Link to="/services" className={style.li}>Services</Link></li>
-      <li><Link to="/gallery" className={style.li}>Gallery</Link></li>
-      <li><Link to="/contact" className={style.li}>Contact</Link></li>
-    </ul>
+)}
 
-    <Menu
-      className={style.menu}
-      onClick={menuhandler}
-      size={35}
-      color="white"
-      tabIndex={0}
-      aria-label="Toggle menu"
-    />
 
-    <Link
-      to="https://d.sriyog.com/sudarshanresort"
-      target="_blank"
-      className={style.linkbook}
-    >
-      <img src="/icons/booking.svg" alt="booking-svg" />
-    </Link>
-  </div>
-</nav>
+      {/* NAVBAR */}
+      <nav
+        className={`sticky top-0 z-[1000] w-full h-[110px]
+        flex items-center justify-around gap-[100px] px-[40px]
+        transition-colors duration-300
+        ${scroll ? "bg-[#787878]" : "bg-[#1a1a1a]"}
+        max-[480px]:h-auto max-[480px]:px-[20px] max-[480px]:py-[20px]`}
+      >
+        {/* Logo */}
+        <div>
+          <img
+            src="favicon/logo.webp"
+            alt="logo"
+            className="h-[90px] w-[90px] rounded-full object-cover
+              max-[480px]:h-[70px] max-[480px]:w-[70px]"
+          />
+        </div>
 
-<div className={`${style.mobile_menu} ${scroll ? style.mobile_scroll : ""} ${menu ? style.active : ""}`}>
-  <ul className={style.nav_mobile}>
-    <li><Link to="/" onClick={() => setMenu(false)}>Home</Link></li>
-    <li><Link to="/about" onClick={() => setMenu(false)}>About</Link></li>
-    <li><Link to="/rooms" onClick={() => setMenu(false)}>Rooms</Link></li>
-    <li><Link to="/services" onClick={() => setMenu(false)}>Services</Link></li>
-    <li><Link to="/gallery" onClick={() => setMenu(false)}>Gallery</Link></li>
-    <li><Link to="/contact" onClick={() => setMenu(false)}>Contact</Link></li>
-  </ul>
-</div>
+        {/* Right Side */}
+        <div className="flex items-center gap-[20px]">
+          {/* Desktop Menu */}
+          <ul className="flex gap-[40px] list-none max-[480px]:hidden">
+            {["Home", "About", "Rooms", "Services", "Gallery", "Contact"].map(
+              (item) => (
+                <li key={item}>
+                  <Link
+                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className="text-white text-[17px] font-semibold
+                      transition-colors duration-300 hover:text-[#7fbf42]"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
 
-      
-      </>
-    )
-  }
+          {/* Mobile Menu Icon */}
+          <Menu
+            className="invisible max-[480px]:visible cursor-pointer"
+            onClick={() => setMenu(!menu)}
+            size={35}
+            color="white"
+            aria-label="Toggle menu"
+          />
 
-  export default Nav_Bar
+          {/* Book Button */}
+          <Link
+            to="https://d.sriyog.com/sudarshanresort"
+            target="_blank"
+            className="max-[480px]:hidden"
+          >
+            <img src="/icons/booking.svg" alt="booking" className="h-[45px] rounded-md" />
+          </Link>
+        </div>
+      </nav>
+
+      {/*  MOBILE DROPDOWN */}
+      <div
+        className={`sticky top-[110px] z-[999]
+        bg-[#1a1a1a] overflow-hidden
+        transition-all duration-400 ease-in-out
+        ${menu ? "max-h-[500px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-[10px]"}
+        ${scroll ? "bg-[#787878]" : ""}
+        max-[480px]:top-[80px] flex justify-center`}
+      >
+        <ul className="list-none bg-[#787878] m-0 p-0
+          border border-white mt-[50px] w-[80%]">
+          {["Home", "About", "Rooms", "Services", "Gallery", "Contact"].map(
+            (item) => (
+              <li key={item}>
+                <Link
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  onClick={() => setMenu(false)}
+                  className="block px-[25px] py-[12px]
+                    text-white text-[18px] font-semibold
+                    border border-[#555] hover:bg-[#d68e08]"
+                >
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
+      </div>
+    </>
+  );
+};
+
+export default Nav_Bar;
