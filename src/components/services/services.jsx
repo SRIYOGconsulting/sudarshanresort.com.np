@@ -1,12 +1,12 @@
 
 // import Top from '../top.jsx'
 import NavBar from '../Nav_Bar.jsx'
-import Herosection from '../herosection.jsx'
+import Herosection from './Herosection.jsx'
 import Offer from '../services/offers/services_blog_cards.jsx'
 import Footer from '../Footer.jsx'
-import EnjoyAgro from '../EnjoyAgro.jsx'
 import Additional_Features from '../services/additionalFeatures/additional_feature.jsx'
-import SeoHelmet from '../seoHelmet.jsx'
+import SeoHelmet from '../SeoHelmet.jsx'
+import EnjoyAgro from '../pages/EnjoyAgro.jsx'
  
 const Services = () => {
  

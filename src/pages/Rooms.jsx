@@ -1,8 +1,10 @@
 
-import style from "./roomCards.module.css";
+import Herosection from "../components/Herosection";
+import SeoHelmet from "../components/SeoHelmet";
+import style from "../styles/roomCards.module.css";
 import { Link } from "react-router-dom";
 
-const Roomblogcards = () => {
+const Rooms = () => {
   const roomcontent=[
     {img:"images/rooms/room1.webp",title:"Mercury",price:"2500", per:"/ per night" },
     {img:"images/rooms/room2.webp",title:"Venus",price:"2500", per:"/ per night" },
@@ -15,7 +17,14 @@ const Roomblogcards = () => {
     {img:"images/rooms/room2.webp",title:"Pluto",price:"2500", per:"/ per night" },
   ]
   return (
-
+    <div>
+        <SeoHelmet
+        title="Rooms | Sudarshan Resort"
+        description="Discover luxurious rooms at Sudarshan Resort. Enjoy modern amenities, cozy interiors, and peaceful stays surrounded by nature. Book your stay now!"
+        image="/images/rooms/room1.jpg"
+        url="https://sudarshanresort.com/rooms"
+      />
+        <Herosection h1="Rooms" tab="Home" p="Rooms" bg="images/background/1.webp"/>
      <div className={style.roomcard_container}>
 
       <div className={style.roo}>
@@ -40,7 +49,8 @@ const Roomblogcards = () => {
         ))}
       </div>
     </div>
+    </div>
   );
 };
 
-export default Roomblogcards;
+export default Rooms;

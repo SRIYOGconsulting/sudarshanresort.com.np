@@ -4,8 +4,7 @@ import HomeHero from "./transparent/homeHero.jsx";
 import HomeAbout from "./about/homeAbout.jsx";
 import Footer from "../Footer.jsx";
 import Whatsapp_logo from "../whatsapp_logo.jsx";
-import SeoHelmet from "../seoHelmet.jsx";
-import Menu from "../menu.jsx";
+import SeoHelmet from "../SeoHelmet.jsx";
 
 import style from "./Home.module.css";
 
@@ -71,7 +70,7 @@ const Home = () => {
       <footer>
         <Footer />
       </footer>
-      <Menu />
+
       <Whatsapp_logo />
     </div>
   );

@@ -10,8 +10,10 @@ import qrImage9 from "/images/qr/qr-website.png";
 import qrImage10 from "/images/qr/qr-roomservice.png";
 import qrImage11 from "/images/qr/qr-booking.png";
 import qrImage12 from "/images/qr/qr-booking.png";
+import SeoHelmet from "../components/SeoHelmet";
+import Herosection from "../components/Herosection";
 
-const Qr = () => {
+const QR = () => {
   // Array with the QR code images, titles, and descriptions
   const qrCodes = [
     {
@@ -78,6 +80,14 @@ const Qr = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 font-[sans-serif]">
+        <SeoHelmet
+        title="QR | Sudarshan Resort"
+        description="Get in touch with Sudarshan Resort for reservations, inquiries, or any assistance. We are here to make your stay memorable."
+        image="/images/contact/whatsapplogo.webp"
+        url="https://sudarshanresort.com/contact"
+      />
+      
+        <Herosection h1="QR" tab="Home" p="QR" bg="images/background/1.webp"/>
       <section className="bg-white p-8 text-center">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
@@ -109,4 +119,4 @@ const Qr = () => {
   );
 };
 
-export default Qr;
+export default QR;
