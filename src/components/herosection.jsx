@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import style from '../styles/heroSection.module.css'
+import style from '../styles/heroSection/heroSection.module.css'
 
 const Herosection = ({ h1, tab, p, bg }) => {
   return (

@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import "./index.css";
+
 import App from "./App.jsx";
 
+import Starting_Page from "./components/Starting_Page.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -14,7 +16,6 @@ import Rooms from "./pages/Rooms.jsx";
 import QR from "./pages/QR.jsx";
 import Services from "./pages/Services.jsx";
 
-// Accessibility audit (dev only)
 if (import.meta.env.MODE !== "production") {
   import("react-axe").then(({ default: axe }) => {
     axe(require("react"), require("react-dom"), 1000);
@@ -22,11 +23,17 @@ if (import.meta.env.MODE !== "production") {
 }
 
 const router = createBrowserRouter([
+  // no header and footer
+  {
+    path: "/",
+    element: <Starting_Page />,
+  },
+ //with header and footer
   {
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Home /> },
+      { path: "home", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "gallery", element: <Gallery /> },

@@ -87,15 +87,14 @@
 /* Description truncation */
 .containerCard p.description {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Show only 3 lines */
+    /* -webkit-line-clamp: 3; Show only 3 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.containerCard p.description.expanded {
-    -webkit-line-clamp: unset; /* Show full text */
-}
+/* .containerCard p.description.expanded {
+    -webkit-line-clamp: unset; Show full text } */
 
 /* Responsive adjustments */
 @media screen and (max-width: 1024px) {

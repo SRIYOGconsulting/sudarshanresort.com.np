@@ -1,7 +1,7 @@
 
 import Herosection from "../components/Herosection";
 import SeoHelmet from "../components/SeoHelmet";
-import style from "../styles/roomCards.module.css";
+import style from "../styles/rooms/roomCards.module.css";
 import { Link } from "react-router-dom";
 
 const Rooms = () => {

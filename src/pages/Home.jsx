@@ -5,12 +5,12 @@ import Whatsapp_logo from "../components/Whatsapp_logo.jsx";
 import Menu from "../components/Menu.jsx";
 
 import EnjoyAgro from "./EnjoyAgro.jsx";
-import styleHome from "../components/home/Home.module.css";
-import styleHero from "../components/home/transparent/homeHero.module.css";
-import styleAbout from "../components/home/about/homeAbout.module.css";
-import styleFacilities from "../components/home/facilities/facilitiesBlogcards.module.css";
-import styleAccomodation from "../components/home/ourAccomodation/ourAccomodation.module.css";
-import styleTestimonials from "../components/home/testimonials/Testimonials.module.css";
+import styleHome from "../styles/home/Home.module.css";
+import styleHero from "../styles/home/homeHero.module.css";
+import styleAbout from "../styles/home/homeAbout.module.css";
+import styleFacilities from "../styles/home/facilitiesBlogcards.module.css";
+import styleAccomodation from "../styles/home/ourAccomodation.module.css";
+import styleTestimonials from "../styles/home/testimonials.module.css";
 
 import { Check, Star } from "lucide-react";
 
@@ -180,7 +180,7 @@ const OurAccommodation = () => {
 // ----------------------- Testimonials -----------------------
 const Testimonials = () => {
   const testimonialsData = [
-    { name: "Sakchyam", img: "images/testimonials/sakchyam.webp", title: "Bhaktapur, Nepal", description: "The eco-friendly design and sustainable practices at Sudarshan Agro Resort impressed me immensely..." },
+    { name: "Sakchyam", img: "images/testimonials/sakchyam.webp", title: "Bhaktapur, Nepal", description: "The eco-friendly design and sustainable practices at Sudarshan Agro Resort impressed..." },
     { name: "Aashma", img: "images/testimonials/aashma.webp", title: "Lalitpur, Nepal", description: "Sudarsan Agro Resort provided a wonderful escape from the hectic pace of daily life..." },
     { name: "Bitisha", img: "images/testimonials/bitisha.webp", title: "Biratnagar, Nepal", description: "The resort is a perfect blend of comfort and nature, providing an extraordinary experience..." },
   ];

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SeoHelmet from "../components/SeoHelmet.jsx";
-import styleOffer from "../components/services/offers/services_blog_cards.module.css";
-import styleAdditional from "../components/services/additionalFeatures/Additional_feature.module.css";
+import styleOffer from "../styles/services/services_blog_cards.module.css";
+import styleAdditional from "../styles/services/Additional_feature.module.css";
 import Herosection from "../components/Herosection.jsx";
 import EnjoyAgro from "./EnjoyAgro.jsx";
 
