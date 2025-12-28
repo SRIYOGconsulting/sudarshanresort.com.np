@@ -79,8 +79,8 @@ const QR = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 font-[sans-serif]">
-        <SeoHelmet
+    <div>
+      <SeoHelmet
         title="QR | Sudarshan Resort"
         description="Get in touch with Sudarshan Resort for reservations, inquiries, or any assistance. We are here to make your stay memorable."
         image="/images/contact/whatsapplogo.webp"
@@ -88,6 +88,7 @@ const QR = () => {
       />
       
         <Herosection h1="QR" tab="Home" p="QR" bg="images/background/1.webp"/>
+    <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 font-[sans-serif]">
       <section className="bg-white p-8 text-center">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
@@ -115,6 +116,7 @@ const QR = () => {
           ))}
         </div>
       </section>
+    </div>
     </div>
   );
 };
