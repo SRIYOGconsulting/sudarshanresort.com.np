@@ -13,7 +13,7 @@
   padding: 20px;
   align-items: center;
   justify-content: center;
-  gap: 460px; /* Desktop gap – large screens */
+  gap: 460px;
   background-color: #f4f4f4;
 }
 
@@ -65,7 +65,6 @@
 .images_div {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 30px;
   margin-top: 25px;
 }
@@ -77,7 +76,11 @@
   height: 400px;
 }
 
-/* Keep all your animations and hover effects intact */
+.img1 {
+  width: 100%;
+}
+
+/* Overlay animation */
 .img_wrap::before {
   content: "";
   position: absolute;
@@ -120,7 +123,6 @@
   font-size: 20px;
   font-family: "Poppins";
   font-weight: 500;
-  opacity: 1;
   transform: translateY(-50px);
   transition: all 0.35s ease;
 }
@@ -141,7 +143,6 @@
   border-radius: 4px;
   font-size: 15px;
   font-family: "Poppins";
-  opacity: 1;
   transform: translateY(40px);
   transition: all 0.35s ease;
 }
@@ -152,14 +153,13 @@
 
 .img_wrap:hover .start_price {
   transform: translate(160px, -160px);
-  font-size: 15px;
-  color: #ffffff;
   padding: 5px 15px;
   cursor: pointer;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 480px) {
+
   .container_accomodation_top {
     padding: 50px 0;
   }
@@ -167,7 +167,6 @@
   .container_accomodation {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
     gap: 20px;
     width: 100%;
     padding-left: 45px;
@@ -187,35 +186,35 @@
   }
 
   .btn {
-    margin: 20px 0 0 0;
+    margin-top: 20px;
   }
 
   .images_div {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     gap: 20px;
     align-items: center;
   }
+  
 
   .img_wrap {
     width: 100%;
     max-width: 370px;
     height: 250px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
   }
 
   /* Mobile hover adjustments */
   .img_wrap:hover .p1 {
-    transform: translate(80px, -160px);
+    transform: translate(115px, -140px);
     font-size: 16px;
+    
   }
 
   .img_wrap:hover .start_price {
-    transform: translate(55px, -40px);
+    transform: translate(70px, -40px);
     font-size: 14px;
     width: 50%;
     text-align: center;

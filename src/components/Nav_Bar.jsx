@@ -44,6 +44,8 @@ const Nav_Bar = () => {
           <img src="favicon/logo.webp" alt="logo" />
         </div>
         
+       
+        <div className={style.container_wrapper_bookingimg}>
         <ul className={style.navMenu}>
           <li><Link to="/" className={style.li}>Home</Link></li>
           <li><Link to="/about" className={style.li}>About</Link></li>
@@ -53,21 +55,17 @@ const Nav_Bar = () => {
           {/* added location */}
            {/* <li><Link to="/location" className={style.li}>location</Link></li> */}
           <li><Link to="/contact" className={style.li}>Contact</Link></li>
-          <li> <Link to="https://d.sriyog.com/sudarshanresort" target="_blank" className={style.linkBook} >
+        </ul>
+        <Link to="https://d.sriyog.com/sudarshanresort" target="_blank" className={style.linkBook} >
               <img src="/icons/booking.svg" alt="booking-svg" />
             </Link>
-          </li> 
-        </ul>
 
+            </div>
         <Menu className={style.menu} onClick={menuhandler} size={35} color="white" />
 
-      
-      </nav>
-
-      {/* Mobile Menu */}
+       {/* Mobile Menu */}
       <div   className={`${style.mobileMenu} ${menu ? style.active : ""} `}>
-       
-          
+        
         <ul className={style.navMobile}>
           <li><Link to="/" onClick={() => setMenu(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setMenu(false)}>About</Link></li>
@@ -77,6 +75,9 @@ const Nav_Bar = () => {
           <li><Link to="/contact" onClick={() => setMenu(false)}>Contact</Link></li>
         </ul>
       </div>
+      </nav>
+
+     
     </header>
   );
 };

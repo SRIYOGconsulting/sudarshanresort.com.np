@@ -32,7 +32,6 @@
 }
 
 .phoneContainer p, .emailContainer p {
-  /* color: white; */
 color: rgb(255, 255, 255);
   margin: 0;
 }
@@ -45,7 +44,6 @@ color: rgb(255, 255, 255);
 /* ================= NAVBAR ================= */
 .navContainer {
   position: relative;
-  top: 0;
   z-index: 2000;
   width: 100%;
   background: #1a1a1a;
@@ -54,11 +52,18 @@ color: rgb(255, 255, 255);
   justify-content: space-around;
   padding: 15px 40px;
   transition: background 0.3s ease;
-
+  height: 90px;
 }
-
+.container_wrapper_bookingimg{
+  display: flex;
+  
+ gap: 50px;
+}
 .navScroll {
-  position: fixed;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #787878;
 
 }
@@ -71,7 +76,8 @@ color: rgb(255, 255, 255);
 }
 
 .navMenu {
-  display: flex;
+ 
+    display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -93,7 +99,9 @@ color: rgb(255, 255, 255);
 /* Book button */
 .linkBook img {
   height: 30px;
+  position: static;
 }
+
 
 /* Mobile */
 .menu {
@@ -102,14 +110,16 @@ color: rgb(255, 255, 255);
 }
 
 .mobileMenu {
-  position: fixed;
-  top: 100px;
+ position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
   background: #1a1a1a;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease;
   z-index: 1500;
+
 }
 
 
@@ -120,52 +130,86 @@ color: rgb(255, 255, 255);
 }
 
 .navMobile {
-  list-style: none;
+    list-style: none;
+  margin: 0; 
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 8px;
  
-  margin-top: 105px;
-  padding: 0;
 }
 
-.navMobile li, .navMobile a {
+ .navMobile li {
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.navMobile a {
   display: block;
-  padding: 12px 25px;
-  color: white;
-  font-weight: 600;
- 
-  text-decoration: none;
-  border-bottom: 1px solid #555;
+  width: 100%;
+  padding-left: 10px;
+  text-align: left;
 }
 
 .navMobile li:hover, .navMobile a:hover {
   background: #d68e08;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================= RESPONSIVE ================= */
 @media screen and (max-width: 480px) {
+    .navContainer {
+    justify-content: space-between;
+  }
   
-  /* for top of the nav */
-  .phone_mail_wrapper{
-    display: flex;
+
+  
+  .navMenu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .topContent {
     flex-direction: column;
     gap: 10px;
   }
-  .topContent{
-    display: flex;
+
+  .phone_mail_wrapper {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  
-  /* for menu icon */
-    .navMenu { 
-      display: none; 
-    }
-    .menu { 
-      display: block; 
-    }
-    .mobileMenu{
-      position:fixed;
-    
-    }
+    .navMenu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
    
     
     

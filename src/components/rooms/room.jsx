@@ -6,7 +6,7 @@
   const Room = () => {
    
     return (
-      <div>
+      <div >
      <SeoHelmet
         title="Rooms | Sudarshan Resort"
         description="Discover luxurious rooms at Sudarshan Resort. Enjoy modern amenities, cozy interiors, and peaceful stays surrounded by nature. Book your stay now!"

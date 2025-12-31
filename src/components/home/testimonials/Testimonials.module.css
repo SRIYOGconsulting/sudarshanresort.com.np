@@ -25,32 +25,28 @@
 /* Cards row */
 .cards_row {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     margin-top: 20px;
-    width: 70%;
+    max-width: 80%;
 }
 
-/* Each card width */
-.cards_row > div {
-    flex: 0 0 calc(33.333% - 20px);
-    box-sizing: border-box;
-}
+
 
 /* Individual Card */
 .containerCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content:center;
     background-color: #ffffff;
-    padding: 15px 35px 65px 35px;
-    margin-top: 80px;
+    padding: 50px 35px 65px 35px;
+    margin-top: 50px;
 }
 
 .containerCard img {
-    width: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .containerCard h3 {
@@ -113,6 +109,16 @@
 @media screen and (max-width: 480px) {
     .container {
         padding: 80px 0;
+    }
+    .cards_row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .containerCard{
+        width: 100%;
     }
 
  

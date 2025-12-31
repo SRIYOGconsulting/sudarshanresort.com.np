@@ -61,9 +61,14 @@
   .about_container {
     left: 10%;
     top: 80px;
+    width: fit-content;
   }
 
   .about_container h1 {
     font-size: 32px;
+    width: fit-content;
+  }
+  .header{
+    width: fit-content;
   }
 }

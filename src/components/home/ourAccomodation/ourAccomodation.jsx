@@ -21,7 +21,7 @@ const Our_Accomodation = () => {
     <section className={style.container_accomodation_top} aria-labelledby="accommodation-heading">
       <div className={style.container_accomodation}>
         <div className={style.content_wrap}>
-          <h2 id="accommodation-heading">Our Accommodation</h2>
+          <h1 id="accommodation-heading">Our Accommodation</h1>
           <div className={style.p_and_div}>
             <p className={style.p_line_positioning}>
               Pick a room that best suits your choice and budget
@@ -41,17 +41,18 @@ const Our_Accomodation = () => {
             <img
               src={room.img}
               alt={room.alt}
-              width="600"
-              height="400"
+             className={style.img1}
               loading="lazy"
             />
             <p className={style.p1}>{room.name}</p>
             <Link to="/rooms" className={style.start_price} aria-label={`Starting price for ${room.name} is ${room.price}`}>
               Starting from {room.price}
             </Link>
+            
             <Link to="/book" className={style.book_now} aria-label={`Book ${room.name} now`}>
               Book Now
             </Link>
+            
           </article>
         ))}
       </div>

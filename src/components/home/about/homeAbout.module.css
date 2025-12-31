@@ -15,7 +15,7 @@
 
 .heading_container h3 {
   color: #242424;
-  font-size: 44px;
+  font-size: 34px;
   line-height: 36px;
   margin-bottom: 10px;
 }
@@ -31,7 +31,6 @@
   font-family: "Playfair Display";
   font-weight: bold;
   font-style: italic;
-  font-size: 39px;
   margin-top: 10px;
 }
 
@@ -90,13 +89,19 @@
     justify-content: center;
     align-items: center;
   }
+  .para {
+
+  font-size: 20px;
+ 
+
+}
 
   .content {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
   }
 
   .heading_container {
