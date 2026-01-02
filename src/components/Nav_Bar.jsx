@@ -64,7 +64,7 @@ const Nav_Bar = () => {
         <Menu className={style.menu} onClick={menuhandler} size={35} color="white" />
 
        {/* Mobile Menu */}
-      <div   className={`${style.mobileMenu} ${menu ? style.active : ""} `}>
+      <div   className={`${style.mobileMenu} ${menu ? style.active : ""} $ ${scroll ? style.mobileScroll : ""} `}>
         
         <ul className={style.navMobile}>
           <li><Link to="/" onClick={() => setMenu(false)}>Home</Link></li>

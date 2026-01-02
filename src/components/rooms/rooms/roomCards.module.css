@@ -12,10 +12,7 @@
   display: grid;
   grid-template-columns: repeat(3,400px);
   gap: 40px; 
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  */
+
 }
 
 .imageWrapper {
@@ -113,8 +110,28 @@
   opacity: 1;
 }
 @media screen and (max-width:480px)  {
+ 
+ .roomcard_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+ }
   .roo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .imageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageWrapper img{
+    
+    width: 100%;
+  }
+  
 }

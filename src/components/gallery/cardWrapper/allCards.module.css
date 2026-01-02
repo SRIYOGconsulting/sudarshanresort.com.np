@@ -8,10 +8,17 @@
     padding-bottom: 25px;
 }
 .btn_container{
-    display: flex;
+    /* display: flex;
     column-gap: 25px;
     margin-bottom: 50px;
-    justify-content: center;
+    justify-content: center; */
+    
+    
+     display: flex;
+  column-gap: 25px;
+  margin-bottom: 50px;
+  justify-content: center;
+     position: relative;
     
 }
 
@@ -46,8 +53,18 @@
   position: relative;
   background-color: rgb(238, 178, 67);
   color: white;
-  /* border-color: red; */
   border: none;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;       
+  transform: translateX(-50%);
+  width: 40px;
+  height: 18px;
+  background-color: rgb(238, 178, 67);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
 
@@ -179,43 +196,7 @@
 
 
 
-/* arrow in all twin and double when hover */
 
-.triangle_all{
-  background-color: rgb(238, 178, 67);
-     clip-path: polygon(47% 54%, 0 25%, 100% 27%);
-     width: 50px;
-     height: 55px;
-     margin-left: 20%;
-     top: 0;
-     position: absolute;
-     margin-top: 33.2%;
-     
-} 
-
-
-
-.triangle_twin{
-    background-color: rgb(238, 178, 67);
-     clip-path: polygon(47% 54%, 0 25%, 100% 27%);
-     width: 50px;
-     height: 55px;
-     margin-left: 27%;
-     top: 0;
-     position: absolute;
-     margin-top: 33.2%;
-}
-
-.triangle_double{
-   background-color: rgb(238, 178, 67);
-     clip-path: polygon(47% 54%, 0 25%, 100% 27%);
-     width: 50px;
-     height: 55px;
-     margin-left: 37.2%;
-     top: 0;
-     position: absolute;
-     margin-top: 33.2%;
-}
 
 @media screen and (max-width:480px) {
 .btn_container{
@@ -234,4 +215,10 @@
  
   
 }
+
+  .active::after {
+    width: 28px;
+    height: 14px;
+    bottom: -10px;
+  }
 }

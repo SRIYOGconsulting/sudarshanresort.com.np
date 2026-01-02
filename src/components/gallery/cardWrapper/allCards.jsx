@@ -24,7 +24,6 @@ const [activeTab, setActiveTab] = useState("all");
       {/* ALL → show everything */}
 {activeTab === "all" && (
   <div className={style.condition_container}>
-    <div className={style.triangle_all}></div>
     <All/>
     <Twin_bed />
     <Doublebed_cards />
@@ -34,7 +33,6 @@ const [activeTab, setActiveTab] = useState("all");
 {/* TWIN ONLY */}
 {activeTab === "twin" && (
   <div className={style.condition_container}>
-    <div className={style.triangle_twin}></div>
     <Twin_bed />
   </div>
 )}
@@ -42,7 +40,6 @@ const [activeTab, setActiveTab] = useState("all");
 {/* DOUBLE ONLY */}
 {activeTab === "double" && (
   <div className={style.condition_container}>
-     <div className={style.triangle_double}></div>
     <Doublebed_cards />
   </div>
 )}

@@ -1,6 +1,6 @@
 .Aboutcontainer {
   position: relative;
-  height: 32vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -16,13 +16,13 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  /* background: rgba(0, 0, 0, 0.55); */
 }
 
 .about_container {
   position: relative;
   z-index: 2;
-  top: 100px;
+  top: 200px;
   left: 18%;
 }
 
@@ -60,9 +60,10 @@
 @media (max-width: 480px) {
   .about_container {
     left: 10%;
-    top: 80px;
+    top: 200px;
     width: fit-content;
   }
+ 
 
   .about_container h1 {
     font-size: 32px;

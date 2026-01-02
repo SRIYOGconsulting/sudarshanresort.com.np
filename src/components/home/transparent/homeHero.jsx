@@ -36,11 +36,45 @@ const HeaderContent = () => {
 
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting, texts]);
+  
+  const dynamicimg=[
+    {img:"/images/home/SudarshanHome.webp"},
+    {img:"/images/gallery/1.webp"},
+    {img:"/images/gallery/2.webp"},
+     {img:"/images/gallery/3.webp"},
+    {img:"/images/gallery/4.webp"},
+    
+  ]
+  
+  // dynamic image mapping
+  const [currentImg, setCurrentImg] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentImg((prev) => (prev + 1) % dynamicimg.length);
+  }, 2000); 
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <section className={style.sudarshan_main_container} aria-labelledby="hero-heading">
       {/* LCP IMAGE */}
-      <img
+     {dynamicimg.map((item,index)=>(
+     <div key={index}>
+          <img
+        src={dynamicimg[currentImg].img}
+        alt="Sudarshan Resort luxury stay surrounded by nature"
+        className={style.heroImg}
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+        key={currentImg}
+      />
+     </div>
+     ))}
+      {/* <img
         src="/images/home/SudarshanHome.webp"
         alt="Sudarshan Resort luxury stay surrounded by nature"
         className={style.heroImg}
@@ -48,7 +82,7 @@ const HeaderContent = () => {
         decoding="async"
         width="1920"
         height="1080"
-      />
+      /> */}
 
       <div className={style.overlay} aria-hidden="true"></div>
 

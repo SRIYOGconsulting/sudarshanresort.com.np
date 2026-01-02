@@ -7,7 +7,7 @@
 .footer_hero_container {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 160px;
   background-color: green;
   color: white;
   padding-top: 50px;
@@ -89,11 +89,12 @@
 .container_bottom {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
+  gap: 550px;
   font-size: 16px;
   color: white;
   height: 45px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   background-color: #141414;
 }
 .container_bottom p {
@@ -160,5 +161,8 @@
 .mail {
   word-break: break-all;       /* allows breaking long words */
   overflow-wrap: anywhere;    /* modern & best support */
+}
+.container_bottom p {
+ width: 90%;
 }
 }
