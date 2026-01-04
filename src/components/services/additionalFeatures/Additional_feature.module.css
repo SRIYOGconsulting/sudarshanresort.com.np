@@ -55,3 +55,13 @@
   margin-top: 15px;
   text-align: justify;
 }
+@media screen and (max-width:480px) {
+  .header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+  
+}

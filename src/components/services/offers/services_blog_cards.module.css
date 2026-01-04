@@ -43,3 +43,27 @@
     object-fit: cover;
     margin-bottom: 12px;
 }
+
+@media screen and (max-width:480px) {
+    .services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.service_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0; */
+    width: 80%;
+    border: 1px solid black;
+  
+}
+.line{
+    width: 10%;
+}
+}

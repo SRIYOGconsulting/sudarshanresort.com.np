@@ -38,6 +38,28 @@
   display: flex;
   gap: 20px;
 }
+/* navbar active  color set*/
+.active {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navMenu .active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #2ecc71;
+  margin-top: 5px;
+}
+
+/* Mobile */
+.navMobile .active {
+  background: rgb(12, 192, 36);
+  
+}
+
 
 /* NAVBAR */
 .navContainer {
@@ -93,7 +115,8 @@
 
 /* Book button */
 .linkBook img {
-  height: 30px;
+  height: 40px;
+  border-radius: 6px;
 }
 
 /* MOBILE MENU */

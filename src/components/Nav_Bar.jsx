@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import style from "../styles/navBar.module.css";
 import { Menu, Mail, PhoneCall, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Nav_Bar = () => {
   const [scroll, setScroll] = useState(false);
   const [menu, setMenu] = useState(false);
-
+  
   useEffect(() => {
     const onScroll = () => setScroll(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
@@ -14,7 +14,10 @@ const Nav_Bar = () => {
   }, []);
 
   const menuhandler = () => setMenu(prev => !prev);
-
+  
+  // const [active, setActive]= useState("green");
+  
+  
   return (
     <header>
       {/* Top Bar */}
@@ -47,14 +50,14 @@ const Nav_Bar = () => {
        
         <div className={style.container_wrapper_bookingimg}>
         <ul className={style.navMenu}>
-          <li><Link to="/" className={style.li}>Home</Link></li>
-          <li><Link to="/about" className={style.li}>About</Link></li>
-          <li><Link to="/rooms" className={style.li}>Rooms</Link></li>
-          <li><Link to="/services" className={style.li}>Services</Link></li>
-          <li><Link to="/gallery" className={style.li}>Gallery</Link></li>
+          <li><NavLink to="/" className={({isActive}) => isActive ? style.active : style.li}>Home</NavLink></li>
+          <li><NavLink to="/about" className={({isActive}) => isActive ? style.active : style.li} >About</NavLink></li>
+          <li><NavLink to="/rooms" className={({isActive}) => isActive ? style.active : style.li}>Rooms</NavLink></li>
+          <li><NavLink to="/services" className={({isActive}) => isActive ? style.active : style.li}>Services</NavLink></li>
+          <li><NavLink to="/gallery" className={({isActive}) => isActive ? style.active : style.li}>Gallery</NavLink></li>
           {/* added location */}
            {/* <li><Link to="/location" className={style.li}>location</Link></li> */}
-          <li><Link to="/contact" className={style.li}>Contact</Link></li>
+          <li><NavLink to="/contact" className={({isActive}) => isActive ? style.active : style.li}>Contact</NavLink></li>
         </ul>
         <Link to="https://d.sriyog.com/sudarshanresort" target="_blank" className={style.linkBook} >
               <img src="/icons/booking.svg" alt="booking-svg" />
@@ -67,12 +70,12 @@ const Nav_Bar = () => {
       <div   className={`${style.mobileMenu} ${menu ? style.active : ""} $ ${scroll ? style.mobileScroll : ""} `}>
         
         <ul className={style.navMobile}>
-          <li><Link to="/" onClick={() => setMenu(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setMenu(false)}>About</Link></li>
-          <li><Link to="/rooms" onClick={() => setMenu(false)}>Rooms</Link></li>
-          <li><Link to="/services" onClick={() => setMenu(false)}>Services</Link></li>
-          <li><Link to="/gallery" onClick={() => setMenu(false)}>Gallery</Link></li>
-          <li><Link to="/contact" onClick={() => setMenu(false)}>Contact</Link></li>
+          <li><NavLink to="/" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)} >Home</NavLink></li>
+          <li><NavLink to="/about" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)}>About</NavLink></li>
+          <li><NavLink to="/rooms" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)}>Rooms</NavLink></li>
+          <li><NavLink to="/services" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)}>Services</NavLink></li>
+          <li><NavLink to="/gallery" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)}>Gallery</NavLink></li>
+          <li><NavLink to="/contact" className={({isActive}) => isActive ? style.active : ""} onClick={() => setMenu(false)}>Contact</NavLink></li>
         </ul>
       </div>
       </nav>

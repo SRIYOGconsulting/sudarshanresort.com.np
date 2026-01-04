@@ -18,7 +18,7 @@ const Book_now = () => {
       />
       {/* <Top /> */}
       <Nav_bar />
-      <Hero h1="Booking" tab="Home" p="Booking" bg="images/background/1.webp" />
+      <Hero h1="Booking" tab="Home" p="booking" bg="images/background/1.webp" />
       <Booking_Form />
       <Footer/>
     </div>

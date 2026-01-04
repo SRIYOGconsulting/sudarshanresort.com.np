@@ -12,12 +12,21 @@
 .contentWrapper{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 50px;
 }
 .sudarshanresort_header_line_wrapper{
     width: 100%;
     
 }
+.Each_content_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+
 .h2{
     font-family: 'Poppins';
     font-weight: 600;
@@ -40,7 +49,8 @@
 
 .line{
     margin-top: 20px;
-    width: 350px;
+    width: 100%;
+    /* width: 350px; */
     border-bottom: 1px solid #D4D4D4;
     
 
@@ -48,13 +58,16 @@
 @media screen and (max-width:480px) {
     .containerallwrap{
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     margin-left: 0;
     
 }
 .line{
-    width: 300px;
+    width: 100%;
     
+}
+.contentWrapper{
+    line-break: anywhere;
 }
 
 }
