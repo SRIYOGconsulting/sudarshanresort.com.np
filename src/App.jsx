@@ -11,6 +11,7 @@ import Contact from './components/contact/contact.jsx'
 import ScrollToTop from "./components/scrolltop.jsx";
 import Book_Now from './components/bookNow/book_now.jsx'
 import Location from './components/location/location.jsx'
+import ViewMore from './components/rooms/viewMore/viewMore.jsx'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       <Route path='/contact' element={<Contact />} />
       <Route path='/location' element={<Location />} />
       <Route path='/book' element={<Book_Now />} />
+      <Route path="/rooms/viewmore/:id" element={<ViewMore />} />
         
     </Routes>
     </>
